@@ -24,14 +24,11 @@ trait FormTrait
     /**
      * @inheritDoc
      */
-    public function form(bool $horizontal = false, bool $wrapped = false): self
+    public function form(bool $horizontal = false, bool $wrapped = false, ...$arguments): self
     {
         if ($wrapped) {
             $this->builder->createWrapper('div', ['class' => 'portlet-body form']);
         }
-        $arguments = func_get_args();
-        array_shift($arguments);
-        array_shift($arguments);
         $this->builder->createScope('form', $arguments);
         if ($horizontal) {
             $this->builder->prependClass('form-horizontal');
@@ -42,9 +39,9 @@ trait FormTrait
     /**
      * @inheritDoc
      */
-    public function formRow(): self
+    public function formRow(...$arguments): self
     {
-        $this->builder->createScope('div', func_get_args());
+        $this->builder->createScope('div', $arguments);
         $this->builder->prependClass('form-group');
         return $this;
     }

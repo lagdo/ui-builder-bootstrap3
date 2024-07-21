@@ -2,11 +2,6 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Traits;
 
-use Lagdo\UiBuilder\BuilderInterface;
-
-use function array_shift;
-use function func_get_args;
-
 trait PanelTrait
 {
     abstract protected function createScope(string $name, array $arguments = []): self;
@@ -22,10 +17,8 @@ trait PanelTrait
     /**
      * @inheritDoc
      */
-    public function panel(string $style = 'default'): self
+    public function panel(string $style = 'default', ...$arguments): self
     {
-        $arguments = func_get_args();
-        array_shift($arguments);
         $this->builder->createScope('div', $arguments);
         $this->builder->prependClass("panel panel-$style");
         return $this;
@@ -34,9 +27,9 @@ trait PanelTrait
     /**
      * @inheritDoc
      */
-    public function panelHeader(): self
+    public function panelHeader(...$arguments): self
     {
-        $this->builder->createScope('div', func_get_args());
+        $this->builder->createScope('div', $arguments);
         $this->builder->prependClass('panel-heading');
         return $this;
     }
@@ -44,9 +37,9 @@ trait PanelTrait
     /**
      * @inheritDoc
      */
-    public function panelBody(): self
+    public function panelBody(...$arguments): self
     {
-        $this->builder->createScope('div', func_get_args());
+        $this->builder->createScope('div', $arguments);
         $this->builder->prependClass('panel-body');
         return $this;
     }
@@ -54,9 +47,9 @@ trait PanelTrait
     /**
      * @inheritDoc
      */
-    public function panelFooter(): self
+    public function panelFooter(...$arguments): self
     {
-        $this->builder->createScope('div', func_get_args());
+        $this->builder->createScope('div', $arguments);
         $this->builder->prependClass('panel-footer');
         return $this;
     }
