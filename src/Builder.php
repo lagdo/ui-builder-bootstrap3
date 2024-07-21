@@ -2,7 +2,7 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3;
 
-use Lagdo\UiBuilder\AbstractBuilder;
+use Lagdo\UiBuilder\Builder as AbstractBuilder;
 
 class Builder extends AbstractBuilder
 {
@@ -13,15 +13,6 @@ class Builder extends AbstractBuilder
     use Traits\MenuTrait;
     use Traits\TabTrait;
     use Traits\PaginationTrait;
-
-    /**
-     * @var array
-     */
-    protected $buttonStyles = [
-        0 => 'default',
-        self::BTN_PRIMARY => 'primary',
-        self::BTN_DANGER => 'danger',
-    ];
 
     /**
      * @inheritDoc
@@ -74,7 +65,7 @@ class Builder extends AbstractBuilder
     {
         $this->builder->createScope('div', $arguments);
         $this->builder->prependClass('input-group');
-        $this->scope->isInputGroup = true;
+        $this->builder->scope()->isInputGroup = true;
         return $this;
     }
 
