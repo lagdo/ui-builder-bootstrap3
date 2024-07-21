@@ -2,23 +2,11 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Traits;
 
-use Lagdo\UiBuilder\BuilderInterface;
-
-use function array_shift;
-use function func_get_args;
 use function rtrim;
 use function ltrim;
 
 trait FormTrait
 {
-    abstract protected function createScope(string $name, array $arguments = []): self;
-
-    abstract protected function createWrapper(string $name, array $arguments = []): self;
-
-    abstract protected function prependClass(string $class): self;
-
-    abstract protected function setAttributes(array $attributes): self;
-
     abstract public function end(): self;
 
     /**
