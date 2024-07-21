@@ -27,9 +27,9 @@ trait ButtonTrait
     {
         $arguments = func_get_args();
         array_shift($arguments);
-        $this->createScope('div', $arguments);
-        $this->prependClass($fullWidth ? 'btn-group btn-group-justified' : 'btn-group');
-        $this->setAttributes(['role' => 'group','aria-label' => '...']);
+        $this->builder->createScope('div', $arguments);
+        $this->builder->prependClass($fullWidth ? 'btn-group btn-group-justified' : 'btn-group');
+        $this->builder->setAttributes(['role' => 'group', 'aria-label' => '...']);
         $this->scope->isButtonGroup = true;
         return $this;
     }
@@ -78,18 +78,18 @@ trait ButtonTrait
         $isInButtonGroup = false;
         if ($this->scope !== null) {
             if ($this->scope->isInputGroup) {
-                $this->createWrapper('div', ['class' => 'input-group-btn']);
+                $this->builder->createWrapper('div', ['class' => 'input-group-btn']);
             }
             if ($this->scope->isButtonGroup && ($flags & AbstractBuilder::BTN_FULL_WIDTH)) {
-                $this->createWrapper('div', ['class' => 'btn-group', 'role' => 'group']);
+                $this->builder->createWrapper('div', ['class' => 'btn-group', 'role' => 'group']);
                 $isInButtonGroup = true;
             }
         }
         $arguments = func_get_args();
         array_shift($arguments);
-        $this->createScope('button', $arguments);
-        $this->prependClass($this->buttonClass($flags, $isInButtonGroup));
-        $this->setAttributes(['type' => 'button']);
+        $this->builder->createScope('button', $arguments);
+        $this->builder->prependClass($this->buttonClass($flags, $isInButtonGroup));
+        $this->builder->setAttribute('type', 'button');
         return $this;
     }
 }

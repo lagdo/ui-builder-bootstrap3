@@ -23,8 +23,8 @@ trait PaginationTrait
      */
     public function pagination(): self
     {
-        $this->createScope('ul', func_get_args());
-        $this->prependClass('pagination');
+        $this->builder->createScope('ul', func_get_args());
+        $this->builder->prependClass('pagination');
         return $this;
     }
 
@@ -33,8 +33,8 @@ trait PaginationTrait
      */
     public function paginationItem(): self
     {
-        $this->createWrapper('li');
-        $this->createScope('a', func_get_args());
+        $this->builder->createWrapper('li');
+        $this->builder->createScope('a', func_get_args());
         return $this;
     }
 
@@ -43,8 +43,8 @@ trait PaginationTrait
      */
     public function paginationActiveItem(): self
     {
-        $this->createWrapper('li', ['class' => 'active']);
-        $this->createScope('a', func_get_args());
+        $this->builder->createWrapper('li', ['class' => 'active']);
+        $this->builder->createScope('a', func_get_args());
         return $this;
     }
 
@@ -53,8 +53,8 @@ trait PaginationTrait
      */
     public function paginationDisabledItem(): self
     {
-        $this->createWrapper('li', ['class' => 'disabled']);
-        $this->createScope('span', func_get_args());
+        $this->builder->createWrapper('li', ['class' => 'disabled']);
+        $this->builder->createScope('span', func_get_args());
         return $this;
     }
 }

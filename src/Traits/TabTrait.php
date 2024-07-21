@@ -24,10 +24,10 @@ trait TabTrait
      */
     public function tabNav(string $id = ''): self
     {
-        $this->createScope('ul', func_get_args());
-        $this->prependClass('nav nav-pills');
+        $this->builder->createScope('ul', func_get_args());
+        $this->builder->prependClass('nav nav-pills');
         if (($id)) {
-            $this->setAttributes(['id' => $id]);
+            $this->builder->setAttribute('id', $id);
         }
         return $this;
     }
@@ -40,14 +40,14 @@ trait TabTrait
         $arguments = func_get_args();
         array_shift($arguments);
         array_shift($arguments);
-        $this->createWrapper('li');
+        $this->builder->createWrapper('li');
         if ($active) {
-            $this->prependClass('active');
+            $this->builder->prependClass('active');
         }
-        $this->setAttributes(['role' => 'presentation']);
+        $this->builder->setAttribute('role', 'presentation');
         // Inner link
-        $this->createScope('a', $arguments);
-        $this->setAttributes(['data-toggle' => 'pill', 'href' => "#$target"]);
+        $this->builder->createScope('a', $arguments);
+        $this->builder->setAttributes(['data-toggle' => 'pill', 'href' => "#$target"]);
         return $this;
     }
 
@@ -56,9 +56,9 @@ trait TabTrait
      */
     public function tabContent(): self
     {
-        $this->createScope('div', func_get_args());
-        $this->prependClass('tab-content');
-        $this->setAttributes(['style' => 'margin-top:10px;']);
+        $this->builder->createScope('div', func_get_args());
+        $this->builder->prependClass('tab-content');
+        $this->builder->setAttribute('style', 'margin-top:10px;');
         return $this;
     }
 
@@ -70,9 +70,9 @@ trait TabTrait
         $arguments = func_get_args();
         array_shift($arguments);
         array_shift($arguments);
-        $this->createScope('div', $arguments);
-        $this->prependClass($active ? 'tab-pane fade in active' : 'tab-pane fade in');
-        $this->setAttributes(['id' => $id]);
+        $this->builder->createScope('div', $arguments);
+        $this->builder->prependClass($active ? 'tab-pane fade in active' : 'tab-pane fade in');
+        $this->builder->setAttribute('id', $id);
         return $this;
     }
 }

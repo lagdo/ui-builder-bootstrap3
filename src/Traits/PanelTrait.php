@@ -26,8 +26,8 @@ trait PanelTrait
     {
         $arguments = func_get_args();
         array_shift($arguments);
-        $this->createScope('div', $arguments);
-        $this->prependClass("panel panel-$style");
+        $this->builder->createScope('div', $arguments);
+        $this->builder->prependClass("panel panel-$style");
         return $this;
     }
 
@@ -36,8 +36,8 @@ trait PanelTrait
      */
     public function panelHeader(): self
     {
-        $this->createScope('div', func_get_args());
-        $this->prependClass('panel-heading');
+        $this->builder->createScope('div', func_get_args());
+        $this->builder->prependClass('panel-heading');
         return $this;
     }
 
@@ -46,8 +46,8 @@ trait PanelTrait
      */
     public function panelBody(): self
     {
-        $this->createScope('div', func_get_args());
-        $this->prependClass('panel-body');
+        $this->builder->createScope('div', func_get_args());
+        $this->builder->prependClass('panel-body');
         return $this;
     }
 
@@ -56,8 +56,8 @@ trait PanelTrait
      */
     public function panelFooter(): self
     {
-        $this->createScope('div', func_get_args());
-        $this->prependClass('panel-footer');
+        $this->builder->createScope('div', func_get_args());
+        $this->builder->prependClass('panel-footer');
         return $this;
     }
 }

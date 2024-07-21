@@ -24,8 +24,8 @@ trait LayoutTrait
      */
     public function row(): self
     {
-        $this->createScope('div', func_get_args());
-        $this->prependClass('row');
+        $this->builder->createScope('div', func_get_args());
+        $this->builder->prependClass('row');
         return $this;
     }
 
@@ -39,8 +39,8 @@ trait LayoutTrait
         }
         $arguments = func_get_args();
         array_shift($arguments);
-        $this->createScope('div', $arguments);
-        $this->prependClass("col-md-$width");
+        $this->builder->createScope('div', $arguments);
+        $this->builder->prependClass("col-md-$width");
         return $this;
     }
 }

@@ -5,8 +5,8 @@
 [![Total Downloads](https://poser.pugx.org/lagdo/ui-builder-bootstrap3/downloads)](https://packagist.org/packages/lagdo/ui-builder-bootstrap3)
 [![License](https://poser.pugx.org/lagdo/ui-builder-bootstrap3/license)](https://packagist.org/packages/lagdo/ui-builder-bootstrap3)
 
-Bootstrap extensions for the HTML UI builder
-============================================
+Bootstrap 3 extension for the HTML UI builder
+=============================================
 
 This package extends the [HTML UI builder](https://github.com/lagdo/ui-builder) and implements functions to create UI components for Bootstrap 3.
 

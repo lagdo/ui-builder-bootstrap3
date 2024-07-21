@@ -27,14 +27,14 @@ trait FormTrait
     public function form(bool $horizontal = false, bool $wrapped = false): self
     {
         if ($wrapped) {
-            $this->createWrapper('div', ['class' => 'portlet-body form']);
+            $this->builder->createWrapper('div', ['class' => 'portlet-body form']);
         }
         $arguments = func_get_args();
         array_shift($arguments);
         array_shift($arguments);
-        $this->createScope('form', $arguments);
+        $this->builder->createScope('form', $arguments);
         if ($horizontal) {
-            $this->prependClass('form-horizontal');
+            $this->builder->prependClass('form-horizontal');
         }
         return $this;
     }
@@ -44,8 +44,8 @@ trait FormTrait
      */
     public function formRow(): self
     {
-        $this->createScope('div', func_get_args());
-        $this->prependClass('form-group');
+        $this->builder->createScope('div', func_get_args());
+        $this->builder->prependClass('form-group');
         return $this;
     }
 
