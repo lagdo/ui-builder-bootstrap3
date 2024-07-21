@@ -10,20 +10,20 @@ use function func_get_args;
 
 trait ButtonTrait
 {
-    abstract protected function createScope(string $name, array $arguments = []): BuilderInterface;
+    abstract protected function createScope(string $name, array $arguments = []): self;
 
-    abstract protected function createWrapper(string $name, array $arguments = []): BuilderInterface;
+    abstract protected function createWrapper(string $name, array $arguments = []): self;
 
-    abstract protected function prependClass(string $class): BuilderInterface;
+    abstract protected function prependClass(string $class): self;
 
-    abstract protected function setAttributes(array $attributes): BuilderInterface;
+    abstract protected function setAttributes(array $attributes): self;
 
-    abstract public function end(): BuilderInterface;
+    abstract public function end(): self;
 
     /**
      * @inheritDoc
      */
-    public function buttonGroup(bool $fullWidth): BuilderInterface
+    public function buttonGroup(bool $fullWidth): self
     {
         $arguments = func_get_args();
         array_shift($arguments);
@@ -71,7 +71,7 @@ trait ButtonTrait
     /**
      * @inheritDoc
      */
-    public function button(int $flags = 0): BuilderInterface
+    public function button(int $flags = 0): self
     {
         // A button in an input group must be wrapped into a div with class "input-group-btn".
         // Check the parent scope.

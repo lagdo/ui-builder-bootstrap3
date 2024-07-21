@@ -9,20 +9,20 @@ use function func_get_args;
 
 trait LayoutTrait
 {
-    abstract protected function createScope(string $name, array $arguments = []): BuilderInterface;
+    abstract protected function createScope(string $name, array $arguments = []): self;
 
-    abstract protected function createWrapper(string $name, array $arguments = []): BuilderInterface;
+    abstract protected function createWrapper(string $name, array $arguments = []): self;
 
-    abstract protected function prependClass(string $class): BuilderInterface;
+    abstract protected function prependClass(string $class): self;
 
-    abstract protected function setAttributes(array $attributes): BuilderInterface;
+    abstract protected function setAttributes(array $attributes): self;
 
-    abstract public function end(): BuilderInterface;
+    abstract public function end(): self;
 
     /**
      * @inheritDoc
      */
-    public function row(): BuilderInterface
+    public function row(): self
     {
         $this->createScope('div', func_get_args());
         $this->prependClass('row');
@@ -32,7 +32,7 @@ trait LayoutTrait
     /**
      * @inheritDoc
      */
-    public function col(int $width = 12): BuilderInterface
+    public function col(int $width = 12): self
     {
         if ($width < 1 || $width > 12) {
             $width = 12; // Full width by default.

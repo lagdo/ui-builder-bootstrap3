@@ -8,20 +8,20 @@ use function func_get_args;
 
 trait PaginationTrait
 {
-    abstract protected function createScope(string $name, array $arguments = []): BuilderInterface;
+    abstract protected function createScope(string $name, array $arguments = []): self;
 
-    abstract protected function createWrapper(string $name, array $arguments = []): BuilderInterface;
+    abstract protected function createWrapper(string $name, array $arguments = []): self;
 
-    abstract protected function prependClass(string $class): BuilderInterface;
+    abstract protected function prependClass(string $class): self;
 
-    abstract protected function setAttributes(array $attributes): BuilderInterface;
+    abstract protected function setAttributes(array $attributes): self;
 
-    abstract public function end(): BuilderInterface;
+    abstract public function end(): self;
 
     /**
      * @inheritDoc
      */
-    public function pagination(): BuilderInterface
+    public function pagination(): self
     {
         $this->createScope('ul', func_get_args());
         $this->prependClass('pagination');
@@ -31,7 +31,7 @@ trait PaginationTrait
     /**
      * @inheritDoc
      */
-    public function paginationItem(): BuilderInterface
+    public function paginationItem(): self
     {
         $this->createWrapper('li');
         $this->createScope('a', func_get_args());
@@ -41,7 +41,7 @@ trait PaginationTrait
     /**
      * @inheritDoc
      */
-    public function paginationActiveItem(): BuilderInterface
+    public function paginationActiveItem(): self
     {
         $this->createWrapper('li', ['class' => 'active']);
         $this->createScope('a', func_get_args());
@@ -51,7 +51,7 @@ trait PaginationTrait
     /**
      * @inheritDoc
      */
-    public function paginationDisabledItem(): BuilderInterface
+    public function paginationDisabledItem(): self
     {
         $this->createWrapper('li', ['class' => 'disabled']);
         $this->createScope('span', func_get_args());

@@ -9,20 +9,20 @@ use function func_get_args;
 
 trait TabTrait
 {
-    abstract protected function createScope(string $name, array $arguments = []): BuilderInterface;
+    abstract protected function createScope(string $name, array $arguments = []): self;
 
-    abstract protected function createWrapper(string $name, array $arguments = []): BuilderInterface;
+    abstract protected function createWrapper(string $name, array $arguments = []): self;
 
-    abstract protected function prependClass(string $class): BuilderInterface;
+    abstract protected function prependClass(string $class): self;
 
-    abstract protected function setAttributes(array $attributes): BuilderInterface;
+    abstract protected function setAttributes(array $attributes): self;
 
-    abstract public function end(): BuilderInterface;
+    abstract public function end(): self;
 
     /**
      * @inheritDoc
      */
-    public function tabNav(string $id = ''): BuilderInterface
+    public function tabNav(string $id = ''): self
     {
         $this->createScope('ul', func_get_args());
         $this->prependClass('nav nav-pills');
@@ -35,7 +35,7 @@ trait TabTrait
     /**
      * @inheritDoc
      */
-    public function tabNavItem(string $target, bool $active = false): BuilderInterface
+    public function tabNavItem(string $target, bool $active = false): self
     {
         $arguments = func_get_args();
         array_shift($arguments);
@@ -54,7 +54,7 @@ trait TabTrait
     /**
      * @inheritDoc
      */
-    public function tabContent(): BuilderInterface
+    public function tabContent(): self
     {
         $this->createScope('div', func_get_args());
         $this->prependClass('tab-content');
@@ -65,7 +65,7 @@ trait TabTrait
     /**
      * @inheritDoc
      */
-    public function tabContentItem(string $id, bool $active = false): BuilderInterface
+    public function tabContentItem(string $id, bool $active = false): self
     {
         $arguments = func_get_args();
         array_shift($arguments);
