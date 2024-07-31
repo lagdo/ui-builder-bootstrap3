@@ -3,6 +3,7 @@
 namespace Lagdo\UiBuilder\Bootstrap3;
 
 use Lagdo\UiBuilder\Builder as AbstractBuilder;
+use Lagdo\UiBuilder\BuilderInterface;
 
 class Builder extends AbstractBuilder
 {
@@ -17,7 +18,7 @@ class Builder extends AbstractBuilder
     /**
      * @inheritDoc
      */
-    public function addIcon(string $icon): self
+    public function addIcon(string $icon): BuilderInterface
     {
         return $this->addHtml('<span class="glyphicon glyphicon-' . $icon . '" aria-hidden="true" />');
     }
@@ -25,7 +26,7 @@ class Builder extends AbstractBuilder
     /**
      * @inheritDoc
      */
-    public function addCaret(): self
+    public function addCaret(): BuilderInterface
     {
         return $this->addHtml('<span class="caret" />');
     }
@@ -33,7 +34,7 @@ class Builder extends AbstractBuilder
     /**
      * @inheritDoc
      */
-    public function checkbox(bool $checked = false, ...$arguments): self
+    public function checkbox(bool $checked = false, ...$arguments): BuilderInterface
     {
         if($this->builder->isInputGroup())
         {
@@ -48,7 +49,7 @@ class Builder extends AbstractBuilder
     /**
      * @inheritDoc
      */
-    public function text(...$arguments): self
+    public function text(...$arguments): BuilderInterface
     {
         // A label in an input group must be wrapped into a span with class "input-group-addon".
         if ($this->builder->isInputGroup()) {
@@ -61,7 +62,7 @@ class Builder extends AbstractBuilder
     /**
      * @inheritDoc
      */
-    public function inputGroup(...$arguments): self
+    public function inputGroup(...$arguments): BuilderInterface
     {
         $this->builder->createScope('div', $arguments);
         $this->builder->prependClass('input-group');
@@ -72,7 +73,7 @@ class Builder extends AbstractBuilder
     /**
      * @inheritDoc
      */
-    public function table(bool $responsive, string $style = '', ...$arguments): self
+    public function table(bool $responsive, string $style = '', ...$arguments): BuilderInterface
     {
         if ($responsive) {
             $this->builder->createWrapper('div', ['class' => 'table-responsive']);

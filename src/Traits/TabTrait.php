@@ -2,14 +2,16 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Traits;
 
+use Lagdo\UiBuilder\BuilderInterface;
+
 trait TabTrait
 {
-    abstract public function end(): self;
+    abstract public function end(): BuilderInterface;
 
     /**
      * @inheritDoc
      */
-    public function tabNav(string $id = '', ...$arguments): self
+    public function tabNav(string $id = '', ...$arguments): BuilderInterface
     {
         $this->builder->createScope('ul', [$id, ...$arguments]);
         $this->builder->prependClass('nav nav-pills');
@@ -22,7 +24,7 @@ trait TabTrait
     /**
      * @inheritDoc
      */
-    public function tabNavItem(string $target, bool $active = false, ...$arguments): self
+    public function tabNavItem(string $target, bool $active = false, ...$arguments): BuilderInterface
     {
         $this->builder->createWrapper('li');
         if ($active) {
@@ -38,7 +40,7 @@ trait TabTrait
     /**
      * @inheritDoc
      */
-    public function tabContent(...$arguments): self
+    public function tabContent(...$arguments): BuilderInterface
     {
         $this->builder->createScope('div', $arguments);
         $this->builder->prependClass('tab-content');
@@ -49,7 +51,7 @@ trait TabTrait
     /**
      * @inheritDoc
      */
-    public function tabContentItem(string $id, bool $active = false, ...$arguments): self
+    public function tabContentItem(string $id, bool $active = false, ...$arguments): BuilderInterface
     {
         $this->builder->createScope('div', $arguments);
         $this->builder->prependClass($active ? 'tab-pane fade in active' : 'tab-pane fade in');

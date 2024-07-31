@@ -2,14 +2,16 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Traits;
 
+use Lagdo\UiBuilder\BuilderInterface;
+
 trait PaginationTrait
 {
-    abstract public function end(): self;
+    abstract public function end(): BuilderInterface;
 
     /**
      * @inheritDoc
      */
-    public function pagination(...$arguments): self
+    public function pagination(...$arguments): BuilderInterface
     {
         $this->builder->createScope('ul', $arguments);
         $this->builder->prependClass('pagination');
@@ -19,7 +21,7 @@ trait PaginationTrait
     /**
      * @inheritDoc
      */
-    public function paginationItem(...$arguments): self
+    public function paginationItem(...$arguments): BuilderInterface
     {
         $this->builder->createWrapper('li');
         $this->builder->createScope('a', $arguments);
@@ -29,7 +31,7 @@ trait PaginationTrait
     /**
      * @inheritDoc
      */
-    public function paginationActiveItem(...$arguments): self
+    public function paginationActiveItem(...$arguments): BuilderInterface
     {
         $this->builder->createWrapper('li', ['class' => 'active']);
         $this->builder->createScope('a', $arguments);
@@ -39,7 +41,7 @@ trait PaginationTrait
     /**
      * @inheritDoc
      */
-    public function paginationDisabledItem(...$arguments): self
+    public function paginationDisabledItem(...$arguments): BuilderInterface
     {
         $this->builder->createWrapper('li', ['class' => 'disabled']);
         $this->builder->createScope('span', $arguments);
