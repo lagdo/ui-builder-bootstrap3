@@ -24,7 +24,7 @@ trait ButtonTrait
      */
     protected $sizeStyles = [
         AbstractBuilder::BTN_LARGE => 'lg',
-        AbstractBuilder::BTN_SMALL => 'sm',
+        AbstractBuilder::BTN_SMALL => 'xs',
     ];
 
     abstract public function end(): BuilderInterface;
