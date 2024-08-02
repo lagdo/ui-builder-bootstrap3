@@ -21,10 +21,7 @@
     "autoload": {
         "psr-4": {
             "Lagdo\\UiBuilder\\Bootstrap3\\": "src/"
-        },
-        "files": [
-            "src/start.php"
-        ]
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true
