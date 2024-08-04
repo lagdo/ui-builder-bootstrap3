@@ -2,31 +2,10 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Traits;
 
-use Lagdo\UiBuilder\Builder as AbstractBuilder;
 use Lagdo\UiBuilder\BuilderInterface;
 
 trait ButtonTrait
 {
-    /**
-     * @var array
-     */
-    protected $mainStyles = [
-        AbstractBuilder::BTN_PRIMARY => 'primary',
-        AbstractBuilder::BTN_SECONDARY => 'default',
-        AbstractBuilder::BTN_SUCCESS => 'success',
-        AbstractBuilder::BTN_INFO => 'info',
-        AbstractBuilder::BTN_WARNING => 'warning',
-        AbstractBuilder::BTN_DANGER => 'danger',
-    ];
-
-    /**
-     * @var array
-     */
-    protected $sizeStyles = [
-        AbstractBuilder::BTN_LARGE => 'lg',
-        AbstractBuilder::BTN_SMALL => 'xs',
-    ];
-
     abstract public function end(): BuilderInterface;
 
     /**
@@ -42,62 +21,113 @@ trait ButtonTrait
     }
 
     /**
-     * @param integer $flags
-     *
-     * @return string
-     */
-    private function mainClass(int $flags): string
-    {
-        foreach ($this->mainStyles as $mask => $value) {
-            if ($flags & $mask) {
-                return "btn btn-$value";
-            }
-        }
-        // The default style is "default"
-        return 'btn btn-default';
-    }
-
-    /**
-     * @param integer $flags
-     * @param boolean $isInButtonGroup
-     *
-     * @return string
-     */
-    private function buttonClass(int $flags, bool $isInButtonGroup): string
-    {
-        $btnClass = $this->mainClass($flags);
-        foreach ($this->sizeStyles as $mask => $value) {
-            if ($flags & $mask) {
-                $btnClass .= " btn-$value";
-            }
-        }
-        if (($flags & AbstractBuilder::BTN_FULL_WIDTH) && !$isInButtonGroup) {
-            $btnClass .= ' btn-block';
-        }
-        return $btnClass;
-    }
-
-    /**
      * @inheritDoc
      */
-    public function button(int $flags = 0, ...$arguments): BuilderInterface
+    public function button(...$arguments): BuilderInterface
     {
         // A button in an input group must be wrapped into a div with class "input-group-btn".
         // Check the parent scope.
         $scope = $this->builder->scope();
-        $isInButtonGroup = false;
         if ($scope !== null) {
             if ($scope->isInputGroup) {
                 $this->builder->createWrapper('div', ['class' => 'input-group-btn']);
             }
-            if ($scope->isButtonGroup && ($flags & AbstractBuilder::BTN_FULL_WIDTH)) {
-                $this->builder->createWrapper('div', ['class' => 'btn-group', 'role' => 'group']);
-                $isInButtonGroup = true;
-            }
         }
         $this->builder->createScope('button', $arguments);
-        $this->builder->prependClass($this->buttonClass($flags, $isInButtonGroup));
+        $this->builder->prependClass('btn');
         $this->builder->setAttribute('type', 'button');
+        return $this;
+    }
+
+    /**
+     * @return BuilderInterface
+     */
+    public function btnOutline(): BuilderInterface
+    {
+        // Not implemented.
+        return $this;
+    }
+
+    /**
+     * @return BuilderInterface
+     */
+    public function btnFullWidth(): BuilderInterface
+    {
+        if (!$this->builder->scope()->isInButtonGroup) {
+            $this->builder->appendClass('btn-block');
+        }
+        return $this;
+    }
+
+    /**
+     * @return BuilderInterface
+     */
+    public function btnLarge(): BuilderInterface
+    {
+        $this->builder->appendClass('btn-lg');
+        return $this;
+    }
+
+    /**
+     * @return BuilderInterface
+     */
+    public function btnSmall(): BuilderInterface
+    {
+        $this->builder->appendClass('btn-xs');
+        return $this;
+    }
+
+    /**
+     * @return BuilderInterface
+     */
+    public function btnPrimary(): BuilderInterface
+    {
+        $this->builder->appendClass('btn-primary');
+        return $this;
+    }
+
+    /**
+     * @return BuilderInterface
+     */
+    public function btnSecondary(): BuilderInterface
+    {
+        $this->builder->appendClass('btn-default');
+        return $this;
+    }
+
+    /**
+     * @return BuilderInterface
+     */
+    public function btnSuccess(): BuilderInterface
+    {
+        $this->builder->appendClass('btn-success');
+        return $this;
+    }
+
+    /**
+     * @return BuilderInterface
+     */
+    public function btnInfo(): BuilderInterface
+    {
+        $this->builder->appendClass('btn-info');
+        return $this;
+    }
+
+    /**
+     * @return BuilderInterface
+     */
+    public function btnWarning(): BuilderInterface
+    {
+        $this->builder->appendClass('btn-warning');
+        return $this;
+    }
+
+    /**
+     * @return BuilderInterface
+     */
+    public function btnDanger(): BuilderInterface
+    {
+        $this->builder->appendClass('btn-danger');
         return $this;
     }
 }
