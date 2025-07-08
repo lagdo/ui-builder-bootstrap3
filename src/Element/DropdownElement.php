@@ -11,7 +11,7 @@ class DropdownElement extends BaseElement
      */
     protected function onCreate(): void
     {
-        $this->prependClass('btn-group');
+        $this->addBaseClass('btn-group');
         $this->setAttribute('role', 'group');
     }
 }

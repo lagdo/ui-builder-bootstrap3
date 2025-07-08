@@ -11,7 +11,7 @@ class TableElement extends BaseElement
      */
     protected function onCreate(): void
     {
-        $this->prependClass('table');
+        $this->addBaseClass('table');
     }
 
     /**
@@ -32,7 +32,7 @@ class TableElement extends BaseElement
      */
     public function style(string $style): static
     {
-        $this->appendClass("table-$style");
+        $this->addClass("table-$style");
         return $this;
     }
 }

@@ -11,6 +11,6 @@ class MenuElement extends BaseElement
      */
     protected function onCreate(): void
     {
-        $this->prependClass('list-group');
+        $this->addBaseClass('list-group');
     }
 }

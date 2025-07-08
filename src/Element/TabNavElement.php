@@ -16,8 +16,8 @@ class TabNavElement extends BaseElement
      */
     protected function onCreate(): void
     {
-        $this->prependClass('nav');
-        $this->prependClass('nav-tabs');
+        $this->addBaseClass('nav');
+        $this->addBaseClass('nav-tabs');
     }
 
     /**

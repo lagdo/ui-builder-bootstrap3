@@ -65,7 +65,7 @@ trait FormTrait
     protected function createFormElement(string $tagName, $arguments): ElementInterface
     {
         $element = $this->builder->createElement($tagName, $arguments);
-        $element->prependClass($tagName === 'label' ? 'control-label' : 'form-control');
+        $element->addBaseClass($tagName === 'label' ? 'control-label' : 'form-control');
         return $element;
     }
 }

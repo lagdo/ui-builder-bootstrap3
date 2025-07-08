@@ -11,6 +11,6 @@ class PanelElement extends BaseElement
      */
     protected function onCreate(): void
     {
-        $this->prependClass('panel');
+        $this->addBaseClass('panel');
     }
 }

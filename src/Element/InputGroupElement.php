@@ -11,6 +11,6 @@ class InputGroupElement extends BaseElement
      */
     protected function onCreate(): void
     {
-        $this->prependClass('input-group');
+        $this->addBaseClass('input-group');
     }
 }

@@ -11,6 +11,6 @@ class TabContentElement extends BaseElement
      */
     protected function onCreate(): void
     {
-        $this->prependClass('tab-content');
+        $this->addBaseClass('tab-content');
     }
 }

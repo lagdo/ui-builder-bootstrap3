@@ -11,6 +11,6 @@ class PanelFooterElement extends BaseElement
      */
     protected function onCreate(): void
     {
-        $this->prependClass('panel-footer');
+        $this->addBaseClass('panel-footer');
     }
 }

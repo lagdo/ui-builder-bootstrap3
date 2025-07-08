@@ -11,7 +11,7 @@ class TabContentItemElement extends BaseElement
      */
     protected function onCreate(): void
     {
-        $this->prependClass('tab-pane fade');
+        $this->addBaseClass('tab-pane fade');
     }
 
     /**
@@ -21,7 +21,7 @@ class TabContentItemElement extends BaseElement
      */
     public function active(bool $active = false): static
     {
-        $active && $this->prependClass('in active');
+        $active && $this->addBaseClass('in active');
         return $this;
     }
 }

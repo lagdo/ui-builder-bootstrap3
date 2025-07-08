@@ -11,7 +11,7 @@ class ButtonGroupElement extends BaseElement
      */
     protected function onCreate(): void
     {
-        $this->prependClass('btn-group');
+        $this->addBaseClass('btn-group');
         $this->setAttribute('role', 'group');
     }
 
@@ -20,7 +20,7 @@ class ButtonGroupElement extends BaseElement
      */
     public function fullWidth(): static
     {
-        $this->appendClass('btn-group-justified');
+        $this->addClass('btn-group-justified');
         return $this;
     }
 }

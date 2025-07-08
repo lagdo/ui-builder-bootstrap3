@@ -11,7 +11,7 @@ class FormElement extends BaseElement
      */
     public function horizontal(bool $horizontal = true): static
     {
-        $horizontal && $this->prependClass('form-horizontal');
+        $horizontal && $this->addBaseClass('form-horizontal');
         return $this;
     }
 

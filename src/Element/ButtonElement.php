@@ -19,7 +19,7 @@ class ButtonElement extends BaseElement
      */
     protected function onCreate(): void
     {
-        $this->prependClass('btn');
+        $this->addBaseClass('btn');
         $this->setAttribute('type', 'button');
     }
 
@@ -31,7 +31,7 @@ class ButtonElement extends BaseElement
     protected function onBuild(Element $parent): void
     {
         if ($this->fullWidth && !is_a($parent, ButtonGroupElement::class)) {
-            $this->appendClass('btn-block');
+            $this->addClass('btn-block');
         }
         // A button in an input group must be wrapped into a div with class "input-group-btn".
         if (is_a($parent, InputGroupElement::class)) {
@@ -62,7 +62,7 @@ class ButtonElement extends BaseElement
      */
     public function primary(): static
     {
-        $this->appendClass('btn-primary');
+        $this->addClass('btn-primary');
         return $this;
     }
 
@@ -71,7 +71,7 @@ class ButtonElement extends BaseElement
      */
     public function secondary(): static
     {
-        $this->appendClass('btn-default');
+        $this->addClass('btn-default');
         return $this;
     }
 
@@ -80,7 +80,7 @@ class ButtonElement extends BaseElement
      */
     public function large(): static
     {
-        $this->appendClass('btn-lg');
+        $this->addClass('btn-lg');
         return $this;
     }
 
@@ -89,7 +89,7 @@ class ButtonElement extends BaseElement
      */
     public function small(): static
     {
-        $this->appendClass('btn-xs');
+        $this->addClass('btn-xs');
         return $this;
     }
 
@@ -98,7 +98,7 @@ class ButtonElement extends BaseElement
      */
     public function success(): static
     {
-        $this->appendClass('btn-success');
+        $this->addClass('btn-success');
         return $this;
     }
 
@@ -107,7 +107,7 @@ class ButtonElement extends BaseElement
      */
     public function info(): static
     {
-        $this->appendClass('btn-info');
+        $this->addClass('btn-info');
         return $this;
     }
 
@@ -116,7 +116,7 @@ class ButtonElement extends BaseElement
      */
     public function warning(): static
     {
-        $this->appendClass('btn-warning');
+        $this->addClass('btn-warning');
         return $this;
     }
 
@@ -125,7 +125,7 @@ class ButtonElement extends BaseElement
      */
     public function danger(): static
     {
-        $this->appendClass('btn-danger');
+        $this->addClass('btn-danger');
         return $this;
     }
 

@@ -11,6 +11,6 @@ class RowElement extends BaseElement
      */
     protected function onCreate(): void
     {
-        $this->prependClass('row');
+        $this->addBaseClass('row');
     }
 }

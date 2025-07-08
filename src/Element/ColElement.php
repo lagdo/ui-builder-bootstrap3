@@ -16,7 +16,7 @@ class ColElement extends BaseElement
         if ($width < 1 || $width > 12) {
             $width = 12; // Full width by default.
         }
-        $this->prependClass("col-md-$width");
+        $this->addBaseClass("col-md-$width");
         return $this;
     }
 }

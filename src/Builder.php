@@ -25,7 +25,7 @@ class Builder extends AbstractBuilder
     public function formRow(...$arguments): RowInterface
     {
         $element = $this->row(...$arguments);
-        $element->prependClass('form-group');
+        $element->addBaseClass('form-group');
         return $element;
     }
 

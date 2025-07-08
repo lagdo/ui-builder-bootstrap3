@@ -11,6 +11,6 @@ class PanelHeaderElement extends BaseElement
      */
     protected function onCreate(): void
     {
-        $this->prependClass('panel-heading');
+        $this->addBaseClass('panel-heading');
     }
 }
