@@ -2,84 +2,46 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3;
 
-use Lagdo\UiBuilder\Builder as AbstractBuilder;
-use Lagdo\UiBuilder\BuilderInterface;
+use Lagdo\UiBuilder\AbstractBuilder;
+use Lagdo\UiBuilder\Bootstrap3\Element\TableElement;
+use Lagdo\UiBuilder\Bootstrap3\Element\TextElement;
+use Lagdo\UiBuilder\Element\RowInterface;
+use Lagdo\UiBuilder\Element\TextInterface;
+use Lagdo\UiBuilder\Element\TableInterface;
 
 class Builder extends AbstractBuilder
 {
-    use Traits\LayoutTrait;
-    use Traits\ButtonTrait;
-    use Traits\PanelTrait;
-    use Traits\FormTrait;
-    use Traits\MenuTrait;
-    use Traits\TabTrait;
-    use Traits\PaginationTrait;
+    use Builder\LayoutTrait;
+    use Builder\ButtonTrait;
+    use Builder\PanelTrait;
+    use Builder\FormTrait;
+    use Builder\MenuTrait;
+    use Builder\TabTrait;
+    use Builder\PaginationTrait;
 
     /**
      * @inheritDoc
      */
-    public function addIcon(string $icon): BuilderInterface
+    public function formRow(...$arguments): RowInterface
     {
-        return $this->addHtml('<span class="glyphicon glyphicon-' . $icon . '" aria-hidden="true" />');
+        $element = $this->row(...$arguments);
+        $element->prependClass('form-group');
+        return $element;
     }
 
     /**
      * @inheritDoc
      */
-    public function addCaret(): BuilderInterface
+    public function text(...$arguments): TextInterface
     {
-        return $this->addHtml('<span class="caret" />');
+        return $this->createElementOfClass(TextElement::class, $arguments);
     }
 
     /**
      * @inheritDoc
      */
-    public function checkbox(bool $checked = false, ...$arguments): BuilderInterface
+    public function table(...$arguments): TableInterface
     {
-        if($this->builder->isInputGroup())
-        {
-            $this->builder->createWrapper('span', [
-                'class' => 'input-group-addon',
-                'style' => 'background-color:white;padding:8px;',
-            ]);
-        }
-        return parent::checkbox($checked, ...$arguments);
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function text(...$arguments): BuilderInterface
-    {
-        // A label in an input group must be wrapped into a span with class "input-group-addon".
-        if ($this->builder->isInputGroup()) {
-            $this->builder->createWrapper('span', ['class' => 'input-group-addon']);
-        }
-        $this->builder->createScope('span', $arguments);
-        return $this;
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function inputGroup(...$arguments): BuilderInterface
-    {
-        $this->builder->createScope('div', $arguments);
-        $this->builder->prependClass('input-group');
-        $this->builder->scope()->isInputGroup = true;
-        return $this;
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function table(bool $responsive, string $style = '', ...$arguments): BuilderInterface
-    {
-        if ($responsive) {
-            $this->builder->createWrapper('div', ['class' => 'table-responsive']);
-        }
-        $this->builder->createScope('table', $arguments);
-        $this->builder->prependClass($style ? "table table-$style" : 'table');
-        return $this;
+        return $this->createElementOfClass(TableElement::class, $arguments);
     }
 }
