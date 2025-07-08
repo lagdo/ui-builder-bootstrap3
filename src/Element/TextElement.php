@@ -15,7 +15,7 @@ class TextElement extends BaseElement
      *
      * @return void
      */
-    protected function onBuild(Element $parent): void
+    public function onBuild(Element $parent): void
     {
         // A label in an input group must be wrapped into a span with class "input-group-addon".
         if (is_a($parent, InputGroupElement::class)) {

@@ -28,7 +28,7 @@ class ButtonElement extends BaseElement
      *
      * @return void
      */
-    protected function onBuild(Element $parent): void
+    public function onBuild(Element $parent): void
     {
         if ($this->fullWidth && !is_a($parent, ButtonGroupElement::class)) {
             $this->addClass('btn-block');
