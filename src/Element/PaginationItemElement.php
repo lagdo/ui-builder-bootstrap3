@@ -47,7 +47,6 @@ class PaginationItemElement extends BaseElement
     public function number(int $number): static
     {
         $this->setWrapperAttribute(0, 'data-page', $number);
-        $this->addText($number);
         return $this;
     }
 }
