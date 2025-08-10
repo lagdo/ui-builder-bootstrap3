@@ -4,11 +4,11 @@ namespace Lagdo\UiBuilder\Bootstrap3\Element;
 
 use Lagdo\UiBuilder\Builder\Html\Element;
 use Lagdo\UiBuilder\Element\Html\InputGroupElement;
-use Lagdo\UiBuilder\Element\Html\TextElement as BaseElement;
+use Lagdo\UiBuilder\Element\Html\LabelElement as BaseElement;
 
 use function is_a;
 
-class TextElement extends BaseElement
+class LabelElement extends BaseElement
 {
     /**
      * @param Element $parent

@@ -4,9 +4,9 @@ namespace Lagdo\UiBuilder\Bootstrap3;
 
 use Lagdo\UiBuilder\AbstractBuilder;
 use Lagdo\UiBuilder\Bootstrap3\Element\TableElement;
-use Lagdo\UiBuilder\Bootstrap3\Element\TextElement;
+use Lagdo\UiBuilder\Bootstrap3\Element\LabelElement;
 use Lagdo\UiBuilder\Element\RowInterface;
-use Lagdo\UiBuilder\Element\TextInterface;
+use Lagdo\UiBuilder\Element\LabelInterface;
 use Lagdo\UiBuilder\Element\TableInterface;
 
 class Builder extends AbstractBuilder
@@ -32,9 +32,9 @@ class Builder extends AbstractBuilder
     /**
      * @inheritDoc
      */
-    public function text(...$arguments): TextInterface
+    public function label(...$arguments): LabelInterface
     {
-        return $this->createElementOfClass(TextElement::class, $arguments);
+        return $this->createElementOfClass(LabelElement::class, $arguments);
     }
 
     /**
