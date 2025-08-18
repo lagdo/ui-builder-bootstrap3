@@ -16,13 +16,13 @@
         "source": "https://github.com/lagdo/ui-builder-bootstrap"
     },
     "require": {
-        "lagdo/ui-builder": "dev-main"
+        "lagdo/ui-builder": "^0.2"
     },
     "autoload": {
         "psr-4": {
             "Lagdo\\UiBuilder\\Bootstrap3\\": "src/"
         }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "minimum-stability": "stable",
+    "prefer-stable": false
 }
