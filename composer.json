@@ -16,6 +16,7 @@
         "source": "https://github.com/lagdo/ui-builder-bootstrap"
     },
     "require": {
+        "php": ">=8.0",
         "lagdo/ui-builder": "^0.2"
     },
     "autoload": {
