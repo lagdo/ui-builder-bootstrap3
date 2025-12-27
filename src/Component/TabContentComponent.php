@@ -2,9 +2,9 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Component;
 
-use Lagdo\UiBuilder\Component\Html\TabContentElement as BaseElement;
+use Lagdo\UiBuilder\Component\TabContentComponent as BaseComponent;
 
-class TabContentElement extends BaseElement
+class TabContentComponent extends BaseComponent
 {
     /**
      * @return void

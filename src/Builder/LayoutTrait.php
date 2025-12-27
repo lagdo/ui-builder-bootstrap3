@@ -2,26 +2,24 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Builder;
 
-use Lagdo\UiBuilder\Bootstrap3\Component\ColElement;
-use Lagdo\UiBuilder\Bootstrap3\Component\RowElement;
-use Lagdo\UiBuilder\Component\ColInterface;
-use Lagdo\UiBuilder\Component\RowInterface;
+use Lagdo\UiBuilder\Bootstrap3\Component\ColComponent;
+use Lagdo\UiBuilder\Bootstrap3\Component\RowComponent;
 
 trait LayoutTrait
 {
     /**
      * @inheritDoc
      */
-    public function row(...$arguments): RowInterface
+    public function row(...$arguments): RowComponent
     {
-        return $this->createElementOfClass(RowElement::class, $arguments);
+        return $this->createElementOfClass(RowComponent::class, $arguments);
     }
 
     /**
      * @inheritDoc
      */
-    public function col(...$arguments): ColInterface
+    public function col(...$arguments): ColComponent
     {
-        return $this->createElementOfClass(ColElement::class, $arguments);
+        return $this->createElementOfClass(ColComponent::class, $arguments);
     }
 }

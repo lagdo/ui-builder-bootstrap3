@@ -2,9 +2,9 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Component;
 
-use Lagdo\UiBuilder\Component\Html\RadioElement as BaseElement;
+use Lagdo\UiBuilder\Component\RadioComponent as BaseComponent;
 
-class RadioElement extends BaseElement
+class RadioComponent extends BaseComponent
 {
     /**
      * @return void

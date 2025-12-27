@@ -2,36 +2,33 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Builder;
 
-use Lagdo\UiBuilder\Bootstrap3\Component\BadgeElement;
-use Lagdo\UiBuilder\Bootstrap3\Component\ButtonElement;
-use Lagdo\UiBuilder\Bootstrap3\Component\ButtonGroupElement;
-use Lagdo\UiBuilder\Component\BadgeInterface;
-use Lagdo\UiBuilder\Component\ButtonGroupInterface;
-use Lagdo\UiBuilder\Component\ButtonInterface;
+use Lagdo\UiBuilder\Bootstrap3\Component\BadgeComponent;
+use Lagdo\UiBuilder\Bootstrap3\Component\ButtonComponent;
+use Lagdo\UiBuilder\Bootstrap3\Component\ButtonGroupComponent;
 
 trait ButtonTrait
 {
     /**
      * @inheritDoc
      */
-    public function buttonGroup(...$arguments): ButtonGroupInterface
+    public function buttonGroup(...$arguments): ButtonGroupComponent
     {
-        return $this->createElementOfClass(ButtonGroupElement::class, $arguments);
+        return $this->createElementOfClass(ButtonGroupComponent::class, $arguments);
     }
 
     /**
      * @inheritDoc
      */
-    public function button(...$arguments): ButtonInterface
+    public function button(...$arguments): ButtonComponent
     {
-        return $this->createElementOfClass(ButtonElement::class, $arguments);
+        return $this->createElementOfClass(ButtonComponent::class, $arguments);
     }
 
     /**
-     * @return BadgeInterface
+     * @return BadgeComponent
      */
-    public function badge(...$arguments): BadgeInterface
+    public function badge(...$arguments): BadgeComponent
     {
-        return $this->createElementOfClass(BadgeElement::class, $arguments);
+        return $this->createElementOfClass(BadgeComponent::class, $arguments);
     }
 }

@@ -2,9 +2,9 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Component;
 
-use Lagdo\UiBuilder\Component\Html\BadgeElement as BaseElement;
+use Lagdo\UiBuilder\Component\BadgeComponent as BaseComponent;
 
-class BadgeElement extends BaseElement
+class BadgeComponent extends BaseComponent
 {
     /**
      * @inheritDoc

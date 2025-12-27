@@ -3,11 +3,9 @@
 namespace Lagdo\UiBuilder\Bootstrap3;
 
 use Lagdo\UiBuilder\AbstractBuilder;
-use Lagdo\UiBuilder\Bootstrap3\Component\TableElement;
-use Lagdo\UiBuilder\Bootstrap3\Component\LabelElement;
-use Lagdo\UiBuilder\Component\RowInterface;
-use Lagdo\UiBuilder\Component\LabelInterface;
-use Lagdo\UiBuilder\Component\TableInterface;
+use Lagdo\UiBuilder\Bootstrap3\Component\TableComponent;
+use Lagdo\UiBuilder\Bootstrap3\Component\LabelComponent;
+use Lagdo\UiBuilder\Bootstrap3\Component\RowComponent;
 
 class Builder extends AbstractBuilder
 {
@@ -22,7 +20,7 @@ class Builder extends AbstractBuilder
     /**
      * @inheritDoc
      */
-    public function formRow(...$arguments): RowInterface
+    public function formRow(...$arguments): RowComponent
     {
         $element = $this->row(...$arguments);
         $element->addBaseClass('form-group');
@@ -32,16 +30,16 @@ class Builder extends AbstractBuilder
     /**
      * @inheritDoc
      */
-    public function label(...$arguments): LabelInterface
+    public function label(...$arguments): LabelComponent
     {
-        return $this->createElementOfClass(LabelElement::class, $arguments);
+        return $this->createElementOfClass(LabelComponent::class, $arguments);
     }
 
     /**
      * @inheritDoc
      */
-    public function table(...$arguments): TableInterface
+    public function table(...$arguments): TableComponent
     {
-        return $this->createElementOfClass(TableElement::class, $arguments);
+        return $this->createElementOfClass(TableComponent::class, $arguments);
     }
 }

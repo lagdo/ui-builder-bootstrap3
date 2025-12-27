@@ -2,46 +2,42 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Builder;
 
-use Lagdo\UiBuilder\Bootstrap3\Component\TabNavElement;
-use Lagdo\UiBuilder\Bootstrap3\Component\TabNavItemElement;
-use Lagdo\UiBuilder\Bootstrap3\Component\TabContentElement;
-use Lagdo\UiBuilder\Bootstrap3\Component\TabContentItemElement;
-use Lagdo\UiBuilder\Component\TabNavInterface;
-use Lagdo\UiBuilder\Component\TabNavItemInterface;
-use Lagdo\UiBuilder\Component\TabContentInterface;
-use Lagdo\UiBuilder\Component\TabContentItemInterface;
+use Lagdo\UiBuilder\Bootstrap3\Component\TabNavComponent;
+use Lagdo\UiBuilder\Bootstrap3\Component\TabNavItemComponent;
+use Lagdo\UiBuilder\Bootstrap3\Component\TabContentComponent;
+use Lagdo\UiBuilder\Bootstrap3\Component\TabContentItemComponent;
 
 trait TabTrait
 {
     /**
      * @inheritDoc
      */
-    public function tabNav(...$arguments): TabNavInterface
+    public function tabNav(...$arguments): TabNavComponent
     {
-        return $this->createElementOfClass(TabNavElement::class, $arguments);
+        return $this->createElementOfClass(TabNavComponent::class, $arguments);
     }
 
     /**
      * @inheritDoc
      */
-    public function tabNavItem(...$arguments): TabNavItemInterface
+    public function tabNavItem(...$arguments): TabNavItemComponent
     {
-        return $this->createElementOfClass(TabNavItemElement::class, $arguments);
+        return $this->createElementOfClass(TabNavItemComponent::class, $arguments);
     }
 
     /**
      * @inheritDoc
      */
-    public function tabContent(...$arguments): TabContentInterface
+    public function tabContent(...$arguments): TabContentComponent
     {
-        return $this->createElementOfClass(TabContentElement::class, $arguments);
+        return $this->createElementOfClass(TabContentComponent::class, $arguments);
     }
 
     /**
      * @inheritDoc
      */
-    public function tabContentItem(...$arguments): TabContentItemInterface
+    public function tabContentItem(...$arguments): TabContentItemComponent
     {
-        return $this->createElementOfClass(TabContentItemElement::class, $arguments);
+        return $this->createElementOfClass(TabContentItemComponent::class, $arguments);
     }
 }

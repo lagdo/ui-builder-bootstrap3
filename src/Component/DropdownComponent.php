@@ -2,9 +2,9 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Component;
 
-use Lagdo\UiBuilder\Component\Html\DropdownElement as BaseElement;
+use Lagdo\UiBuilder\Component\DropdownComponent as BaseComponent;
 
-class DropdownElement extends BaseElement
+class DropdownComponent extends BaseComponent
 {
     /**
      * @inheritDoc

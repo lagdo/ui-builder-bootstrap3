@@ -2,9 +2,9 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Component;
 
-use Lagdo\UiBuilder\Component\Html\TableElement as BaseElement;
+use Lagdo\UiBuilder\Component\TableComponent as BaseComponent;
 
-class TableElement extends BaseElement
+class TableComponent extends BaseComponent
 {
     /**
      * @return void

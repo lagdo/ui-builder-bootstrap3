@@ -2,9 +2,9 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Component;
 
-use Lagdo\UiBuilder\Component\Html\ButtonGroupElement as BaseElement;
+use Lagdo\UiBuilder\Component\ButtonGroupComponent as BaseComponent;
 
-class ButtonGroupElement extends BaseElement
+class ButtonGroupComponent extends BaseComponent
 {
     /**
      * @return void

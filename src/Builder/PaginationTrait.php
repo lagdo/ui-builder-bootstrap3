@@ -2,26 +2,24 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Builder;
 
-use Lagdo\UiBuilder\Bootstrap3\Component\PaginationElement;
-use Lagdo\UiBuilder\Bootstrap3\Component\PaginationItemElement;
-use Lagdo\UiBuilder\Component\PaginationInterface;
-use Lagdo\UiBuilder\Component\PaginationItemInterface;
+use Lagdo\UiBuilder\Bootstrap3\Component\PaginationComponent;
+use Lagdo\UiBuilder\Bootstrap3\Component\PaginationItemComponent;
 
 trait PaginationTrait
 {
     /**
      * @inheritDoc
      */
-    public function pagination(...$arguments): PaginationInterface
+    public function pagination(...$arguments): PaginationComponent
     {
-        return $this->createElementOfClass(PaginationElement::class, $arguments);
+        return $this->createElementOfClass(PaginationComponent::class, $arguments);
     }
 
     /**
      * @inheritDoc
      */
-    public function paginationItem(...$arguments): PaginationItemInterface
+    public function paginationItem(...$arguments): PaginationItemComponent
     {
-        return $this->createElementOfClass(PaginationItemElement::class, $arguments);
+        return $this->createElementOfClass(PaginationItemComponent::class, $arguments);
     }
 }

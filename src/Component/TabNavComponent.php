@@ -2,9 +2,9 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Component;
 
-use Lagdo\UiBuilder\Component\Html\TabNavElement as BaseElement;
+use Lagdo\UiBuilder\Component\TabNavComponent as BaseComponent;
 
-class TabNavElement extends BaseElement
+class TabNavComponent extends BaseComponent
 {
     /**
      * @var string

@@ -2,9 +2,9 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Component;
 
-use Lagdo\UiBuilder\Component\Html\ColElement as BaseElement;
+use Lagdo\UiBuilder\Component\ColComponent as BaseComponent;
 
-class ColElement extends BaseElement
+class ColComponent extends BaseComponent
 {
     /**
      * @param int $width

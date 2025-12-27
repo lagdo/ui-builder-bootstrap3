@@ -2,9 +2,9 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Component;
 
-use Lagdo\UiBuilder\Component\Html\PaginationItemElement as BaseElement;
+use Lagdo\UiBuilder\Component\PaginationItemComponent as BaseComponent;
 
-class PaginationItemElement extends BaseElement
+class PaginationItemComponent extends BaseComponent
 {
     /**
      * @return void

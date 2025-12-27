@@ -2,9 +2,9 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Component;
 
-use Lagdo\UiBuilder\Component\Html\FormElement as BaseElement;
+use Lagdo\UiBuilder\Component\FormComponent as BaseComponent;
 
-class FormElement extends BaseElement
+class FormComponent extends BaseComponent
 {
     /**
      * @inheritDoc

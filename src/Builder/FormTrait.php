@@ -2,67 +2,62 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Builder;
 
-use Lagdo\UiBuilder\Bootstrap3\Component\CheckboxElement;
-use Lagdo\UiBuilder\Bootstrap3\Component\FormElement;
-use Lagdo\UiBuilder\Bootstrap3\Component\InputGroupElement;
-use Lagdo\UiBuilder\Bootstrap3\Component\OptionElement;
-use Lagdo\UiBuilder\Bootstrap3\Component\RadioElement;
-use Lagdo\UiBuilder\Component\CheckboxInterface;
-use Lagdo\UiBuilder\Component\ElementInterface;
-use Lagdo\UiBuilder\Component\FormInterface;
-use Lagdo\UiBuilder\Component\InputGroupInterface;
-use Lagdo\UiBuilder\Component\OptionInterface;
-use Lagdo\UiBuilder\Component\RadioInterface;
+use Lagdo\UiBuilder\Bootstrap3\Component\CheckboxComponent;
+use Lagdo\UiBuilder\Bootstrap3\Component\FormComponent;
+use Lagdo\UiBuilder\Bootstrap3\Component\InputGroupComponent;
+use Lagdo\UiBuilder\Bootstrap3\Component\OptionComponent;
+use Lagdo\UiBuilder\Bootstrap3\Component\RadioComponent;
+use Lagdo\UiBuilder\Component\Base\HtmlComponent;
 
 trait FormTrait
 {
     /**
      * @inheritDoc
      */
-    public function form(...$arguments): FormInterface
+    public function form(...$arguments): FormComponent
     {
-        return $this->createElementOfClass(FormElement::class, $arguments);
+        return $this->createElementOfClass(FormComponent::class, $arguments);
     }
 
     /**
      * @inheritDoc
      */
-    public function inputGroup(...$arguments): InputGroupInterface
+    public function inputGroup(...$arguments): InputGroupComponent
     {
-        return $this->createElementOfClass(InputGroupElement::class, $arguments);
+        return $this->createElementOfClass(InputGroupComponent::class, $arguments);
     }
 
     /**
      * @inheritDoc
      */
-    public function checkbox(...$arguments): CheckboxInterface
+    public function checkbox(...$arguments): CheckboxComponent
     {
-        return $this->createElementOfClass(CheckboxElement::class, $arguments);
+        return $this->createElementOfClass(CheckboxComponent::class, $arguments);
     }
 
     /**
      * @inheritDoc
      */
-    public function radio(...$arguments): RadioInterface
+    public function radio(...$arguments): RadioComponent
     {
-        return $this->createElementOfClass(RadioElement::class, $arguments);
+        return $this->createElementOfClass(RadioComponent::class, $arguments);
     }
 
     /**
      * @inheritDoc
      */
-    public function option(...$arguments): OptionInterface
+    public function option(...$arguments): OptionComponent
     {
-        return $this->createElementOfClass(OptionElement::class, $arguments);
+        return $this->createElementOfClass(OptionComponent::class, $arguments);
     }
 
     /**
      * @param string $tagName
      * @param array $arguments
      *
-     * @return ElementInterface
+     * @return HtmlComponent
      */
-    protected function createFormElement(string $tagName, $arguments): ElementInterface
+    protected function createFormComponent(string $tagName, $arguments): HtmlComponent
     {
         $element = $this->builder->createElement($tagName, $arguments);
         $element->addBaseClass($tagName === 'label' ? 'control-label' : 'form-control');

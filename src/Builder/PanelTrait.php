@@ -2,46 +2,42 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Builder;
 
-use Lagdo\UiBuilder\Bootstrap3\Component\PanelElement;
-use Lagdo\UiBuilder\Bootstrap3\Component\PanelBodyElement;
-use Lagdo\UiBuilder\Bootstrap3\Component\PanelFooterElement;
-use Lagdo\UiBuilder\Bootstrap3\Component\PanelHeaderElement;
-use Lagdo\UiBuilder\Component\PanelInterface;
-use Lagdo\UiBuilder\Component\PanelBodyInterface;
-use Lagdo\UiBuilder\Component\PanelFooterInterface;
-use Lagdo\UiBuilder\Component\PanelHeaderInterface;
+use Lagdo\UiBuilder\Bootstrap3\Component\PanelComponent;
+use Lagdo\UiBuilder\Bootstrap3\Component\PanelBodyComponent;
+use Lagdo\UiBuilder\Bootstrap3\Component\PanelFooterComponent;
+use Lagdo\UiBuilder\Bootstrap3\Component\PanelHeaderComponent;
 
 trait PanelTrait
 {
     /**
      * @inheritDoc
      */
-    public function panel(...$arguments): PanelInterface
+    public function panel(...$arguments): PanelComponent
     {
-        return $this->createElementOfClass(PanelElement::class, $arguments);
+        return $this->createElementOfClass(PanelComponent::class, $arguments);
     }
 
     /**
      * @inheritDoc
      */
-    public function panelHeader(...$arguments): PanelHeaderInterface
+    public function panelHeader(...$arguments): PanelHeaderComponent
     {
-        return $this->createElementOfClass(PanelHeaderElement::class, $arguments);
+        return $this->createElementOfClass(PanelHeaderComponent::class, $arguments);
     }
 
     /**
      * @inheritDoc
      */
-    public function panelBody(...$arguments): PanelBodyInterface
+    public function panelBody(...$arguments): PanelBodyComponent
     {
-        return $this->createElementOfClass(PanelBodyElement::class, $arguments);
+        return $this->createElementOfClass(PanelBodyComponent::class, $arguments);
     }
 
     /**
      * @inheritDoc
      */
-    public function panelFooter(...$arguments): PanelFooterInterface
+    public function panelFooter(...$arguments): PanelFooterComponent
     {
-        return $this->createElementOfClass(PanelFooterElement::class, $arguments);
+        return $this->createElementOfClass(PanelFooterComponent::class, $arguments);
     }
 }

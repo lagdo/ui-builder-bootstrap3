@@ -2,9 +2,9 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Component;
 
-use Lagdo\UiBuilder\Component\Html\RowElement as BaseElement;
+use Lagdo\UiBuilder\Component\RowComponent as BaseComponent;
 
-class RowElement extends BaseElement
+class RowComponent extends BaseComponent
 {
     /**
      * @return void

@@ -2,9 +2,9 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Component;
 
-use Lagdo\UiBuilder\Component\Html\InputGroupElement as BaseElement;
+use Lagdo\UiBuilder\Component\InputGroupComponent as BaseComponent;
 
-class InputGroupElement extends BaseElement
+class InputGroupComponent extends BaseComponent
 {
     /**
      * @return void
