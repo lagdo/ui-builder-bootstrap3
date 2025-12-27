@@ -1,8 +1,8 @@
 <?php
 
-namespace Lagdo\UiBuilder\Bootstrap3\Element;
+namespace Lagdo\UiBuilder\Bootstrap3\Component;
 
-use Lagdo\UiBuilder\Element\Html\PanelElement as BaseElement;
+use Lagdo\UiBuilder\Component\Html\PanelElement as BaseElement;
 
 class PanelElement extends BaseElement
 {

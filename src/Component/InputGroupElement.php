@@ -1,8 +1,8 @@
 <?php
 
-namespace Lagdo\UiBuilder\Bootstrap3\Element;
+namespace Lagdo\UiBuilder\Bootstrap3\Component;
 
-use Lagdo\UiBuilder\Element\Html\InputGroupElement as BaseElement;
+use Lagdo\UiBuilder\Component\Html\InputGroupElement as BaseElement;
 
 class InputGroupElement extends BaseElement
 {

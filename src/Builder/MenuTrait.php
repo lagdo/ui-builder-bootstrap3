@@ -2,22 +2,22 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Builder;
 
-use Lagdo\UiBuilder\Bootstrap3\Element\BreadcrumbElement;
-use Lagdo\UiBuilder\Bootstrap3\Element\BreadcrumbItemElement;
-use Lagdo\UiBuilder\Bootstrap3\Element\DropdownElement;
-use Lagdo\UiBuilder\Bootstrap3\Element\DropdownItemElement;
-use Lagdo\UiBuilder\Bootstrap3\Element\DropdownMenuElement;
-use Lagdo\UiBuilder\Bootstrap3\Element\DropdownMenuItemElement;
-use Lagdo\UiBuilder\Bootstrap3\Element\MenuElement;
-use Lagdo\UiBuilder\Bootstrap3\Element\MenuItemElement;
-use Lagdo\UiBuilder\Element\BreadcrumbInterface;
-use Lagdo\UiBuilder\Element\BreadcrumbItemInterface;
-use Lagdo\UiBuilder\Element\DropdownInterface;
-use Lagdo\UiBuilder\Element\DropdownItemInterface;
-use Lagdo\UiBuilder\Element\DropdownMenuInterface;
-use Lagdo\UiBuilder\Element\DropdownMenuItemInterface;
-use Lagdo\UiBuilder\Element\MenuInterface;
-use Lagdo\UiBuilder\Element\MenuItemInterface;
+use Lagdo\UiBuilder\Bootstrap3\Component\BreadcrumbElement;
+use Lagdo\UiBuilder\Bootstrap3\Component\BreadcrumbItemElement;
+use Lagdo\UiBuilder\Bootstrap3\Component\DropdownElement;
+use Lagdo\UiBuilder\Bootstrap3\Component\DropdownItemElement;
+use Lagdo\UiBuilder\Bootstrap3\Component\DropdownMenuElement;
+use Lagdo\UiBuilder\Bootstrap3\Component\DropdownMenuItemElement;
+use Lagdo\UiBuilder\Bootstrap3\Component\MenuElement;
+use Lagdo\UiBuilder\Bootstrap3\Component\MenuItemElement;
+use Lagdo\UiBuilder\Component\BreadcrumbInterface;
+use Lagdo\UiBuilder\Component\BreadcrumbItemInterface;
+use Lagdo\UiBuilder\Component\DropdownInterface;
+use Lagdo\UiBuilder\Component\DropdownItemInterface;
+use Lagdo\UiBuilder\Component\DropdownMenuInterface;
+use Lagdo\UiBuilder\Component\DropdownMenuItemInterface;
+use Lagdo\UiBuilder\Component\MenuInterface;
+use Lagdo\UiBuilder\Component\MenuItemInterface;
 
 trait MenuTrait
 {
