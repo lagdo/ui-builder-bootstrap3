@@ -21,7 +21,7 @@ class CheckboxComponent extends BaseComponent
      *
      * @return void
      */
-    public function onBuild(HtmlComponent $parent): void
+    protected function onBuild(HtmlComponent $parent): void
     {
         if (is_a($parent, InputGroupComponent::class)) {
             $this->addWrapper('span', [

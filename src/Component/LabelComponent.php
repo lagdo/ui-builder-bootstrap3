@@ -15,7 +15,7 @@ class LabelComponent extends BaseComponent
      *
      * @return void
      */
-    public function onBuild(HtmlComponent $parent): void
+    protected function onBuild(HtmlComponent $parent): void
     {
         // A label in an input group must be wrapped into a span with class "input-group-addon".
         if (is_a($parent, InputGroupComponent::class)) {
