@@ -30,7 +30,7 @@ class TableComponent extends BaseComponent
      *
      * @return static
      */
-    public function style(string $style): static
+    public function look(string $style): static
     {
         $this->addClass("table-$style");
         return $this;

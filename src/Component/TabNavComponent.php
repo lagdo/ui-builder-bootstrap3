@@ -25,7 +25,7 @@ class TabNavComponent extends BaseComponent
      *
      * @return static
      */
-    public function style(string $style): static
+    public function look(string $style): static
     {
         // Replace the second class.
         $this->classes[0][1] = 'nav-' . trim($style);
