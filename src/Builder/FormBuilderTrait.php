@@ -5,50 +5,59 @@ namespace Lagdo\UiBuilder\Bootstrap3\Builder;
 use Lagdo\UiBuilder\Bootstrap3\Component\CheckboxComponent;
 use Lagdo\UiBuilder\Bootstrap3\Component\FormComponent;
 use Lagdo\UiBuilder\Bootstrap3\Component\InputGroupComponent;
+use Lagdo\UiBuilder\Bootstrap3\Component\LabelComponent;
 use Lagdo\UiBuilder\Bootstrap3\Component\OptionComponent;
 use Lagdo\UiBuilder\Bootstrap3\Component\RadioComponent;
 use Lagdo\UiBuilder\Component\Base\HtmlComponent;
 
-trait FormTrait
+trait FormBuilderTrait
 {
     /**
-     * @inheritDoc
+     * @return string
      */
-    public function form(...$arguments): FormComponent
+    protected function _formComponentClass(): string
     {
-        return $this->createElementOfClass(FormComponent::class, $arguments);
+        return FormComponent::class;
     }
 
     /**
-     * @inheritDoc
+     * @return string
      */
-    public function inputGroup(...$arguments): InputGroupComponent
+    protected function _labelComponentClass(): string
     {
-        return $this->createElementOfClass(InputGroupComponent::class, $arguments);
+        return LabelComponent::class;
     }
 
     /**
-     * @inheritDoc
+     * @return string
      */
-    public function checkbox(...$arguments): CheckboxComponent
+    protected function _inputGroupComponentClass(): string
     {
-        return $this->createElementOfClass(CheckboxComponent::class, $arguments);
+        return InputGroupComponent::class;
     }
 
     /**
-     * @inheritDoc
+     * @return string
      */
-    public function radio(...$arguments): RadioComponent
+    protected function _checkboxComponentClass(): string
     {
-        return $this->createElementOfClass(RadioComponent::class, $arguments);
+        return CheckboxComponent::class;
     }
 
     /**
-     * @inheritDoc
+     * @return string
      */
-    public function option(...$arguments): OptionComponent
+    protected function _radioComponentClass(): string
     {
-        return $this->createElementOfClass(OptionComponent::class, $arguments);
+        return RadioComponent::class;
+    }
+
+    /**
+     * @return string
+     */
+    protected function _optionComponentClass(): string
+    {
+        return OptionComponent::class;
     }
 
     /**
