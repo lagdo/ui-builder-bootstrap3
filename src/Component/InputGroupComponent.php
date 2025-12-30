@@ -11,6 +11,6 @@ class InputGroupComponent extends BaseComponent
      */
     protected function onCreate(): void
     {
-        $this->addBaseClass('input-group');
+        $this->element()->addBaseClass('input-group');
     }
 }

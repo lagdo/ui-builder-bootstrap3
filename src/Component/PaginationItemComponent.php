@@ -21,7 +21,7 @@ class PaginationItemComponent extends BaseComponent
      */
     public function active(bool $active): static
     {
-        $active && $this->setWrapperClass(0, 'active');
+        $active && $this->wrapper(0)->setClass('active');
         return $this;
     }
 
@@ -33,8 +33,8 @@ class PaginationItemComponent extends BaseComponent
     public function enabled(bool $enabled): static
     {
         if (!$enabled) {
-            $this->name = 'span'; // A different tab name.
-            $this->setWrapperClass(0, 'disabled');
+            $this->element()->setTag('span'); // A different tag name.
+            $this->wrapper(0)->setClass('disabled');
         }
         return $this;
     }
@@ -46,7 +46,7 @@ class PaginationItemComponent extends BaseComponent
      */
     public function number(int $number): static
     {
-        $this->setWrapperAttribute(0, 'data-page', $number);
+        $this->wrapper(0)->setAttribute('data-page', $number);
         return $this;
     }
 }

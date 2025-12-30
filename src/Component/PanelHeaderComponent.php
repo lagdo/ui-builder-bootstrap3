@@ -11,6 +11,6 @@ class PanelHeaderComponent extends BaseComponent
      */
     protected function onCreate(): void
     {
-        $this->addBaseClass('panel-heading');
+        $this->element()->addBaseClass('panel-heading');
     }
 }

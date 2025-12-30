@@ -66,10 +66,10 @@ trait FormBuilderTrait
      *
      * @return HtmlComponent
      */
-    protected function createFormElement(string $tagName, $arguments): HtmlComponent
+    protected function createFormComponent(string $tagName, $arguments): HtmlComponent
     {
-        $element = $this->builder->createElement($tagName, $arguments);
-        $element->addBaseClass($tagName === 'label' ? 'control-label' : 'form-control');
-        return $element;
+        $component = $this->builder->createComponent($tagName, $arguments);
+        $component->element()->addBaseClass($tagName === 'label' ? 'control-label' : 'form-control');
+        return $component;
     }
 }

@@ -11,6 +11,6 @@ class RowComponent extends BaseComponent
      */
     protected function onCreate(): void
     {
-        $this->addBaseClass('row');
+        $this->element()->addBaseClass('row');
     }
 }

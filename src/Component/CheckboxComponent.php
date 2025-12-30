@@ -13,7 +13,7 @@ class CheckboxComponent extends BaseComponent
      */
     protected function onCreate(): void
     {
-        $this->setAttribute('type', 'checkbox');
+        $this->element()->setAttribute('type', 'checkbox');
     }
 
     /**

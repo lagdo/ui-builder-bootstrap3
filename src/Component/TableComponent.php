@@ -11,7 +11,7 @@ class TableComponent extends BaseComponent
      */
     protected function onCreate(): void
     {
-        $this->addBaseClass('table');
+        $this->element()->addBaseClass('table');
     }
 
     /**
@@ -32,7 +32,7 @@ class TableComponent extends BaseComponent
      */
     public function look(string $style): static
     {
-        $this->addClass("table-$style");
+        $this->element()->addClass("table-$style");
         return $this;
     }
 }

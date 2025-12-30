@@ -11,6 +11,6 @@ class PanelComponent extends BaseComponent
      */
     protected function onCreate(): void
     {
-        $this->addBaseClass('panel');
+        $this->element()->addBaseClass('panel');
     }
 }

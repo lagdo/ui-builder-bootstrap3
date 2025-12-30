@@ -11,6 +11,6 @@ class PanelFooterComponent extends BaseComponent
      */
     protected function onCreate(): void
     {
-        $this->addBaseClass('panel-footer');
+        $this->element()->addBaseClass('panel-footer');
     }
 }

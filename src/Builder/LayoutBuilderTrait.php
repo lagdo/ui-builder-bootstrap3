@@ -28,8 +28,8 @@ trait LayoutBuilderTrait
      */
     public function formRow(...$arguments): RowComponent
     {
-        $element = $this->row(...$arguments);
-        $element->addBaseClass('form-group');
-        return $element;
+        $component = $this->row(...$arguments);
+        $component->element()->addBaseClass('form-group');
+        return $component;
     }
 }

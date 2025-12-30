@@ -11,7 +11,7 @@ class FormComponent extends BaseComponent
      */
     public function horizontal(bool $horizontal = true): static
     {
-        $horizontal && $this->addBaseClass('form-horizontal');
+        $horizontal && $this->element()->addBaseClass('form-horizontal');
         return $this;
     }
 

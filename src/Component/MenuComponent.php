@@ -11,6 +11,6 @@ class MenuComponent extends BaseComponent
      */
     protected function onCreate(): void
     {
-        $this->addBaseClass('list-group');
+        $this->element()->addBaseClass('list-group');
     }
 }

@@ -16,8 +16,8 @@ class TabNavComponent extends BaseComponent
      */
     protected function onCreate(): void
     {
-        $this->addBaseClass('nav');
-        $this->addBaseClass('nav-tabs');
+        $this->element()->addBaseClass('nav');
+        $this->element()->addBaseClass('nav-tabs');
     }
 
     /**
@@ -28,7 +28,7 @@ class TabNavComponent extends BaseComponent
     public function look(string $style): static
     {
         // Replace the second class.
-        $this->classes[0][1] = 'nav-' . trim($style);
+        $this->element()->setBaseClass(1, 'nav-' . trim($style));
         return $this;
     }
 
@@ -38,7 +38,7 @@ class TabNavComponent extends BaseComponent
     public function vertical(): static
     {
         // Replace the second class.
-        $this->classes[0][2] = 'nav-pills nav-stacked';
+        $this->element()->setBaseClass(2, 'nav-pills nav-stacked');
         return $this;
     }
 
@@ -48,7 +48,7 @@ class TabNavComponent extends BaseComponent
     public function fullWidth(): static
     {
         // Replace the second class.
-        $this->classes[0][2] = 'nav-justified';
+        $this->element()->setBaseClass(2, 'nav-justified');
         return $this;
     }
 

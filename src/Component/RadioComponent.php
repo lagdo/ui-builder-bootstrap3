@@ -11,6 +11,6 @@ class RadioComponent extends BaseComponent
      */
     protected function onCreate(): void
     {
-        $this->setAttribute('type', 'radio');
+        $this->element()->setAttribute('type', 'radio');
     }
 }

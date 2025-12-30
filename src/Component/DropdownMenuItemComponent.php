@@ -16,7 +16,7 @@ class DropdownMenuItemComponent extends BaseComponent
      */
     protected function onCreate(): void
     {
-        $this->setAttribute('href', '#');
+        $this->element()->setAttribute('href', '#');
         $this->addWrapper('li');
     }
 }

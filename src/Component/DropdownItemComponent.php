@@ -11,7 +11,7 @@ class DropdownItemComponent extends BaseComponent
      */
     protected function onCreate(): void
     {
-        $this->setAttributes(['data-toggle' => 'dropdown',
+        $this->element()->setAttributes(['data-toggle' => 'dropdown',
             'aria-haspopup' => 'true', 'aria-expanded' => 'false']);
     }
 }
