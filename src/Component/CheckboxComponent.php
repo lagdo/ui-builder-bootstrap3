@@ -2,9 +2,9 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Component;
 
-use Lagdo\UiBuilder\Component\Base\HtmlComponent;
-use Lagdo\UiBuilder\Component\CheckboxComponent as BaseComponent;
-use Lagdo\UiBuilder\Component\InputGroupComponent;
+use Lagdo\UiBuilder\Component\Base\CheckboxComponent as BaseComponent;
+use Lagdo\UiBuilder\Component\Base\InputGroupComponent;
+use Lagdo\UiBuilder\Component\HtmlComponent;
 
 class CheckboxComponent extends BaseComponent
 {

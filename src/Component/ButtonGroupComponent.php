@@ -2,7 +2,7 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Component;
 
-use Lagdo\UiBuilder\Component\ButtonGroupComponent as BaseComponent;
+use Lagdo\UiBuilder\Component\Base\ButtonGroupComponent as BaseComponent;
 
 class ButtonGroupComponent extends BaseComponent
 {

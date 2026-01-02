@@ -2,7 +2,7 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Component;
 
-use Lagdo\UiBuilder\Component\RowComponent as BaseComponent;
+use Lagdo\UiBuilder\Component\Base\RowComponent as BaseComponent;
 
 class RowComponent extends BaseComponent
 {

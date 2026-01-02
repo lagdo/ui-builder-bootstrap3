@@ -2,7 +2,7 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Component;
 
-use Lagdo\UiBuilder\Component\PanelFooterComponent as BaseComponent;
+use Lagdo\UiBuilder\Component\Base\PanelFooterComponent as BaseComponent;
 
 class PanelFooterComponent extends BaseComponent
 {

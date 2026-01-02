@@ -8,7 +8,7 @@ use Lagdo\UiBuilder\Bootstrap3\Component\InputGroupComponent;
 use Lagdo\UiBuilder\Bootstrap3\Component\LabelComponent;
 use Lagdo\UiBuilder\Bootstrap3\Component\OptionComponent;
 use Lagdo\UiBuilder\Bootstrap3\Component\RadioComponent;
-use Lagdo\UiBuilder\Component\Base\HtmlComponent;
+use Lagdo\UiBuilder\Component\HtmlComponent;
 
 trait FormBuilderTrait
 {

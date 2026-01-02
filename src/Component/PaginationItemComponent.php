@@ -2,7 +2,7 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Component;
 
-use Lagdo\UiBuilder\Component\PaginationItemComponent as BaseComponent;
+use Lagdo\UiBuilder\Component\Base\PaginationItemComponent as BaseComponent;
 
 class PaginationItemComponent extends BaseComponent
 {

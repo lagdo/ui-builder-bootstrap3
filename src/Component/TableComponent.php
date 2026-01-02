@@ -2,7 +2,7 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Component;
 
-use Lagdo\UiBuilder\Component\TableComponent as BaseComponent;
+use Lagdo\UiBuilder\Component\Base\TableComponent as BaseComponent;
 
 class TableComponent extends BaseComponent
 {
