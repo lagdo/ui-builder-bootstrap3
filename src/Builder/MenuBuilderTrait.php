@@ -10,34 +10,13 @@ use Lagdo\UiBuilder\Bootstrap3\Component\MenuItemComponent;
 trait MenuBuilderTrait
 {
     /**
-     * @return string
+     * @return void
      */
-    protected function _menuComponentClass(): string
+    protected function _initMenuBuilder(): void
     {
-        return MenuComponent::class;
-    }
-
-    /**
-     * @return string
-     */
-    protected function _menuItemComponentClass(): string
-    {
-        return MenuItemComponent::class;
-    }
-
-    /**
-     * @return string
-     */
-    protected function _breadcrumbComponentClass(): string
-    {
-        return BreadcrumbComponent::class;
-    }
-
-    /**
-     * @return string
-     */
-    protected function _breadcrumbItemComponentClass(): string
-    {
-        return BreadcrumbItemComponent::class;
+        $this->menuComponentClass = MenuComponent::class;
+        $this->menuItemComponentClass = MenuItemComponent::class;
+        $this->breadcrumbComponentClass = BreadcrumbComponent::class;
+        $this->breadcrumbItemComponentClass = BreadcrumbItemComponent::class;
     }
 }

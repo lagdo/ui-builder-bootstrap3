@@ -8,18 +8,11 @@ use Lagdo\UiBuilder\Bootstrap3\Component\PaginationItemComponent;
 trait PaginationBuilderTrait
 {
     /**
-     * @return string
+     * @return void
      */
-    protected function _paginationComponentClass(): string
+    protected function _initPaginationBuilder(): void
     {
-        return PaginationComponent::class;
-    }
-
-    /**
-     * @return string
-     */
-    protected function _paginationItemComponentClass(): string
-    {
-        return PaginationItemComponent::class;
+        $this->paginationComponentClass = PaginationComponent::class;
+        $this->paginationItemComponentClass = PaginationItemComponent::class;
     }
 }

@@ -10,34 +10,13 @@ use Lagdo\UiBuilder\Bootstrap3\Component\TabContentItemComponent;
 trait TabBuilderTrait
 {
     /**
-     * @return string
+     * @return void
      */
-    protected function _tabNavComponentClass(): string
+    protected function _initTabBuilder(): void
     {
-        return TabNavComponent::class;
-    }
-
-    /**
-     * @return string
-     */
-    protected function _tabNavItemComponentClass(): string
-    {
-        return TabNavItemComponent::class;
-    }
-
-    /**
-     * @return string
-     */
-    protected function _tabContentComponentClass(): string
-    {
-        return TabContentComponent::class;
-    }
-
-    /**
-     * @return string
-     */
-    protected function _tabContentItemComponentClass(): string
-    {
-        return TabContentItemComponent::class;
+        $this->tabNavComponentClass = TabNavComponent::class;
+        $this->tabNavItemComponentClass = TabNavItemComponent::class;
+        $this->tabContentComponentClass = TabContentComponent::class;
+        $this->tabContentItemComponentClass = TabContentItemComponent::class;
     }
 }

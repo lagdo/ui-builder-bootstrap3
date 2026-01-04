@@ -8,19 +8,12 @@ use Lagdo\UiBuilder\Bootstrap3\Component\RowComponent;
 trait LayoutBuilderTrait
 {
     /**
-     * @return string
+     * @return void
      */
-    protected function _rowComponentClass(): string
+    protected function _initLayoutBuilder(): void
     {
-        return RowComponent::class;
-    }
-
-    /**
-     * @return string
-     */
-    protected function _colComponentClass(): string
-    {
-        return ColComponent::class;
+        $this->rowComponentClass = RowComponent::class;
+        $this->colComponentClass = ColComponent::class;
     }
 
     /**

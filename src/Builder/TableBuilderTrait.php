@@ -7,10 +7,10 @@ use Lagdo\UiBuilder\Bootstrap3\Component\TableComponent;
 trait TableBuilderTrait
 {
     /**
-     * @return string
+     * @return void
      */
-    protected function _tableComponentClass(): string
+    protected function _initTableBuilder(): void
     {
-        return TableComponent::class;
+        $this->tableComponentClass = TableComponent::class;
     }
 }

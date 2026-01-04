@@ -13,51 +13,16 @@ use Lagdo\UiBuilder\Component\HtmlComponent;
 trait FormBuilderTrait
 {
     /**
-     * @return string
+     * @return void
      */
-    protected function _formComponentClass(): string
+    protected function _initFormBuilder(): void
     {
-        return FormComponent::class;
-    }
-
-    /**
-     * @return string
-     */
-    protected function _labelComponentClass(): string
-    {
-        return LabelComponent::class;
-    }
-
-    /**
-     * @return string
-     */
-    protected function _inputGroupComponentClass(): string
-    {
-        return InputGroupComponent::class;
-    }
-
-    /**
-     * @return string
-     */
-    protected function _checkboxComponentClass(): string
-    {
-        return CheckboxComponent::class;
-    }
-
-    /**
-     * @return string
-     */
-    protected function _radioComponentClass(): string
-    {
-        return RadioComponent::class;
-    }
-
-    /**
-     * @return string
-     */
-    protected function _optionComponentClass(): string
-    {
-        return OptionComponent::class;
+        $this->formComponentClass = FormComponent::class;
+        $this->labelComponentClass = LabelComponent::class;
+        $this->inputGroupComponentClass = InputGroupComponent::class;
+        $this->checkboxComponentClass = CheckboxComponent::class;
+        $this->radioComponentClass = RadioComponent::class;
+        $this->optionComponentClass = OptionComponent::class;
     }
 
     /**

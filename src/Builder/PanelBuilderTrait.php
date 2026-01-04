@@ -10,34 +10,13 @@ use Lagdo\UiBuilder\Bootstrap3\Component\PanelHeaderComponent;
 trait PanelBuilderTrait
 {
     /**
-     * @return string
+     * @return void
      */
-    protected function _panelComponentClass(): string
+    protected function _initPanelBuilder(): void
     {
-        return PanelComponent::class;
-    }
-
-    /**
-     * @return string
-     */
-    protected function _panelHeaderComponentClass(): string
-    {
-        return PanelHeaderComponent::class;
-    }
-
-    /**
-     * @return string
-     */
-    protected function _panelBodyComponentClass(): string
-    {
-        return PanelBodyComponent::class;
-    }
-
-    /**
-     * @return string
-     */
-    protected function _panelFooterComponentClass(): string
-    {
-        return PanelFooterComponent::class;
+        $this->panelComponentClass = PanelComponent::class;
+        $this->panelHeaderComponentClass = PanelHeaderComponent::class;
+        $this->panelBodyComponentClass = PanelBodyComponent::class;
+        $this->panelFooterComponentClass = PanelFooterComponent::class;
     }
 }

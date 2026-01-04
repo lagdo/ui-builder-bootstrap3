@@ -9,26 +9,12 @@ use Lagdo\UiBuilder\Bootstrap3\Component\ButtonGroupComponent;
 trait ButtonBuilderTrait
 {
     /**
-     * @return string
+     * @return void
      */
-    protected function _buttonComponentClass(): string
+    protected function _initButtonBuilder(): void
     {
-        return ButtonComponent::class;
-    }
-
-    /**
-     * @return string
-     */
-    protected function _buttonGroupComponentClass(): string
-    {
-        return ButtonGroupComponent::class;
-    }
-
-    /**
-     * @return string
-     */
-    protected function _badgeComponentClass(): string
-    {
-        return BadgeComponent::class;
+        $this->buttonComponentClass = ButtonComponent::class;
+        $this->buttonGroupComponentClass = ButtonGroupComponent::class;
+        $this->badgeComponentClass = BadgeComponent::class;
     }
 }
