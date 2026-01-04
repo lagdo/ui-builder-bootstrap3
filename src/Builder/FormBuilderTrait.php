@@ -14,10 +14,13 @@ trait FormBuilderTrait
     {
         $this->formComponentClass = Component\FormComponent::class;
         $this->labelComponentClass = Component\LabelComponent::class;
-        $this->inputGroupComponentClass = Component\InputGroupComponent::class;
+        $this->inputComponentClass = Component\InputComponent::class;
+        $this->textareaComponentClass = Component\TextareaComponent::class;
         $this->checkboxComponentClass = Component\CheckboxComponent::class;
         $this->radioComponentClass = Component\RadioComponent::class;
+        $this->selectComponentClass = Component\SelectComponent::class;
         $this->optionComponentClass = Component\OptionComponent::class;
+        $this->inputGroupComponentClass = Component\InputGroupComponent::class;
     }
 
     /**
