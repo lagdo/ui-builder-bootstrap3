@@ -2,7 +2,7 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Builder;
 
-use Lagdo\UiBuilder\Bootstrap3\Component\TableComponent;
+use Lagdo\UiBuilder\Bootstrap3\Component;
 
 trait TableBuilderTrait
 {
@@ -11,6 +11,6 @@ trait TableBuilderTrait
      */
     protected function _initTableBuilder(): void
     {
-        $this->tableComponentClass = TableComponent::class;
+        $this->tableComponentClass = Component\TableComponent::class;
     }
 }

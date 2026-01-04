@@ -2,9 +2,7 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Builder;
 
-use Lagdo\UiBuilder\Bootstrap3\Component\BadgeComponent;
-use Lagdo\UiBuilder\Bootstrap3\Component\ButtonComponent;
-use Lagdo\UiBuilder\Bootstrap3\Component\ButtonGroupComponent;
+use Lagdo\UiBuilder\Bootstrap3\Component;
 
 trait ButtonBuilderTrait
 {
@@ -13,8 +11,8 @@ trait ButtonBuilderTrait
      */
     protected function _initButtonBuilder(): void
     {
-        $this->buttonComponentClass = ButtonComponent::class;
-        $this->buttonGroupComponentClass = ButtonGroupComponent::class;
-        $this->badgeComponentClass = BadgeComponent::class;
+        $this->buttonComponentClass = Component\ButtonComponent::class;
+        $this->buttonGroupComponentClass = Component\ButtonGroupComponent::class;
+        $this->badgeComponentClass = Component\BadgeComponent::class;
     }
 }

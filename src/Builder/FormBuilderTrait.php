@@ -2,12 +2,7 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Builder;
 
-use Lagdo\UiBuilder\Bootstrap3\Component\CheckboxComponent;
-use Lagdo\UiBuilder\Bootstrap3\Component\FormComponent;
-use Lagdo\UiBuilder\Bootstrap3\Component\InputGroupComponent;
-use Lagdo\UiBuilder\Bootstrap3\Component\LabelComponent;
-use Lagdo\UiBuilder\Bootstrap3\Component\OptionComponent;
-use Lagdo\UiBuilder\Bootstrap3\Component\RadioComponent;
+use Lagdo\UiBuilder\Bootstrap3\Component;
 use Lagdo\UiBuilder\Component\HtmlComponent;
 
 trait FormBuilderTrait
@@ -17,12 +12,12 @@ trait FormBuilderTrait
      */
     protected function _initFormBuilder(): void
     {
-        $this->formComponentClass = FormComponent::class;
-        $this->labelComponentClass = LabelComponent::class;
-        $this->inputGroupComponentClass = InputGroupComponent::class;
-        $this->checkboxComponentClass = CheckboxComponent::class;
-        $this->radioComponentClass = RadioComponent::class;
-        $this->optionComponentClass = OptionComponent::class;
+        $this->formComponentClass = Component\FormComponent::class;
+        $this->labelComponentClass = Component\LabelComponent::class;
+        $this->inputGroupComponentClass = Component\InputGroupComponent::class;
+        $this->checkboxComponentClass = Component\CheckboxComponent::class;
+        $this->radioComponentClass = Component\RadioComponent::class;
+        $this->optionComponentClass = Component\OptionComponent::class;
     }
 
     /**

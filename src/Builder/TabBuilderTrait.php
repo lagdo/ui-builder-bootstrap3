@@ -2,10 +2,7 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Builder;
 
-use Lagdo\UiBuilder\Bootstrap3\Component\TabNavComponent;
-use Lagdo\UiBuilder\Bootstrap3\Component\TabNavItemComponent;
-use Lagdo\UiBuilder\Bootstrap3\Component\TabContentComponent;
-use Lagdo\UiBuilder\Bootstrap3\Component\TabContentItemComponent;
+use Lagdo\UiBuilder\Bootstrap3\Component;
 
 trait TabBuilderTrait
 {
@@ -14,9 +11,9 @@ trait TabBuilderTrait
      */
     protected function _initTabBuilder(): void
     {
-        $this->tabNavComponentClass = TabNavComponent::class;
-        $this->tabNavItemComponentClass = TabNavItemComponent::class;
-        $this->tabContentComponentClass = TabContentComponent::class;
-        $this->tabContentItemComponentClass = TabContentItemComponent::class;
+        $this->tabNavComponentClass = Component\TabNavComponent::class;
+        $this->tabNavItemComponentClass = Component\TabNavItemComponent::class;
+        $this->tabContentComponentClass = Component\TabContentComponent::class;
+        $this->tabContentItemComponentClass = Component\TabContentItemComponent::class;
     }
 }

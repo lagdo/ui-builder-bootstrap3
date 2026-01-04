@@ -2,10 +2,7 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Builder;
 
-use Lagdo\UiBuilder\Bootstrap3\Component\BreadcrumbComponent;
-use Lagdo\UiBuilder\Bootstrap3\Component\BreadcrumbItemComponent;
-use Lagdo\UiBuilder\Bootstrap3\Component\MenuComponent;
-use Lagdo\UiBuilder\Bootstrap3\Component\MenuItemComponent;
+use Lagdo\UiBuilder\Bootstrap3\Component;
 
 trait MenuBuilderTrait
 {
@@ -14,9 +11,9 @@ trait MenuBuilderTrait
      */
     protected function _initMenuBuilder(): void
     {
-        $this->menuComponentClass = MenuComponent::class;
-        $this->menuItemComponentClass = MenuItemComponent::class;
-        $this->breadcrumbComponentClass = BreadcrumbComponent::class;
-        $this->breadcrumbItemComponentClass = BreadcrumbItemComponent::class;
+        $this->menuComponentClass = Component\MenuComponent::class;
+        $this->menuItemComponentClass = Component\MenuItemComponent::class;
+        $this->breadcrumbComponentClass = Component\BreadcrumbComponent::class;
+        $this->breadcrumbItemComponentClass = Component\BreadcrumbItemComponent::class;
     }
 }

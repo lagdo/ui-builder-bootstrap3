@@ -2,10 +2,7 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Builder;
 
-use Lagdo\UiBuilder\Bootstrap3\Component\PanelComponent;
-use Lagdo\UiBuilder\Bootstrap3\Component\PanelBodyComponent;
-use Lagdo\UiBuilder\Bootstrap3\Component\PanelFooterComponent;
-use Lagdo\UiBuilder\Bootstrap3\Component\PanelHeaderComponent;
+use Lagdo\UiBuilder\Bootstrap3\Component;
 
 trait PanelBuilderTrait
 {
@@ -14,9 +11,9 @@ trait PanelBuilderTrait
      */
     protected function _initPanelBuilder(): void
     {
-        $this->panelComponentClass = PanelComponent::class;
-        $this->panelHeaderComponentClass = PanelHeaderComponent::class;
-        $this->panelBodyComponentClass = PanelBodyComponent::class;
-        $this->panelFooterComponentClass = PanelFooterComponent::class;
+        $this->panelComponentClass = Component\PanelComponent::class;
+        $this->panelHeaderComponentClass = Component\PanelHeaderComponent::class;
+        $this->panelBodyComponentClass = Component\PanelBodyComponent::class;
+        $this->panelFooterComponentClass = Component\PanelFooterComponent::class;
     }
 }

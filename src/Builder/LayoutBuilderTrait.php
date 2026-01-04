@@ -2,8 +2,7 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Builder;
 
-use Lagdo\UiBuilder\Bootstrap3\Component\ColComponent;
-use Lagdo\UiBuilder\Bootstrap3\Component\RowComponent;
+use Lagdo\UiBuilder\Bootstrap3\Component;
 
 trait LayoutBuilderTrait
 {
@@ -12,14 +11,14 @@ trait LayoutBuilderTrait
      */
     protected function _initLayoutBuilder(): void
     {
-        $this->rowComponentClass = RowComponent::class;
-        $this->colComponentClass = ColComponent::class;
+        $this->rowComponentClass = Component\RowComponent::class;
+        $this->colComponentClass = Component\ColComponent::class;
     }
 
     /**
      * @inheritDoc
      */
-    public function formRow(...$arguments): RowComponent
+    public function formRow(...$arguments): Component\RowComponent
     {
         $component = $this->row(...$arguments);
         $component->element()->addBaseClass('form-group');

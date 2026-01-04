@@ -2,10 +2,7 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Builder;
 
-use Lagdo\UiBuilder\Bootstrap3\Component\DropdownComponent;
-use Lagdo\UiBuilder\Bootstrap3\Component\DropdownItemComponent;
-use Lagdo\UiBuilder\Bootstrap3\Component\DropdownMenuComponent;
-use Lagdo\UiBuilder\Bootstrap3\Component\DropdownMenuItemComponent;
+use Lagdo\UiBuilder\Bootstrap3\Component;
 
 trait DropdownBuilderTrait
 {
@@ -14,9 +11,9 @@ trait DropdownBuilderTrait
      */
     protected function _initDropdownBuilder(): void
     {
-        $this->dropdownComponentClass = DropdownComponent::class;
-        $this->dropdownItemComponentClass = DropdownItemComponent::class;
-        $this->dropdownMenuComponentClass = DropdownMenuComponent::class;
-        $this->dropdownMenuItemComponentClass = DropdownMenuItemComponent::class;
+        $this->dropdownComponentClass = Component\DropdownComponent::class;
+        $this->dropdownItemComponentClass = Component\DropdownItemComponent::class;
+        $this->dropdownMenuComponentClass = Component\DropdownMenuComponent::class;
+        $this->dropdownMenuItemComponentClass = Component\DropdownMenuItemComponent::class;
     }
 }
