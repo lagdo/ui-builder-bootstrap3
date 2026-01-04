@@ -3,7 +3,6 @@
 namespace Lagdo\UiBuilder\Bootstrap3\Builder;
 
 use Lagdo\UiBuilder\Bootstrap3\Component;
-use Lagdo\UiBuilder\Component\HtmlComponent;
 
 trait FormBuilderTrait
 {
@@ -21,18 +20,5 @@ trait FormBuilderTrait
         $this->selectComponentClass = Component\SelectComponent::class;
         $this->optionComponentClass = Component\OptionComponent::class;
         $this->inputGroupComponentClass = Component\InputGroupComponent::class;
-    }
-
-    /**
-     * @param string $tagName
-     * @param array $arguments
-     *
-     * @return HtmlComponent
-     */
-    protected function createFormComponent(string $tagName, $arguments): HtmlComponent
-    {
-        $component = $this->createComponent($tagName, $arguments);
-        $component->element()->addBaseClass($tagName === 'label' ? 'control-label' : 'form-control');
-        return $component;
     }
 }

@@ -14,14 +14,4 @@ trait LayoutBuilderTrait
         $this->rowComponentClass = Component\RowComponent::class;
         $this->colComponentClass = Component\ColComponent::class;
     }
-
-    /**
-     * @inheritDoc
-     */
-    public function formRow(...$arguments): Component\RowComponent
-    {
-        $component = $this->row(...$arguments);
-        $component->element()->addBaseClass('form-group');
-        return $component;
-    }
 }

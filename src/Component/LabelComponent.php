@@ -17,6 +17,10 @@ class LabelComponent extends BaseComponent
      */
     protected function onBuild(HtmlComponent $parent): void
     {
+        if ($this->inForm()) {
+            $this->element()->addBaseClass('control-label');
+        }
+
         // A label in an input group must be wrapped into a span with class "input-group-addon".
         if (is_a($parent, InputGroupComponent::class)) {
             $this->addWrapper('span', ['class' => 'input-group-addon']);
