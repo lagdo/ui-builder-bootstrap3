@@ -49,15 +49,6 @@ class ButtonComponent extends BaseComponent
     }
 
     /**
-     * @inheritDoc
-     */
-    public function addCaret(): static
-    {
-        $this->addHtml('<span class="caret" />');
-        return $this;
-    }
-
-    /**
      * @return static
      */
     public function primary(): static

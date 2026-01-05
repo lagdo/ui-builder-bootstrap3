@@ -21,7 +21,9 @@ class TableComponent extends BaseComponent
      */
     public function responsive(bool $responsive = true): static
     {
-        $responsive && $this->addWrapper('div', ['class' => 'table-responsive']);
+        if ($responsive) {
+            $this->addWrapper('div', ['class' => 'table-responsive']);
+        }
         return $this;
     }
 
