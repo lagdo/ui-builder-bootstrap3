@@ -8,12 +8,12 @@
             "email": "thierry.feuzeu@gmail.com"
         }
     ],
-    "homepage": "https://github.com/lagdo/ui-builder-bootstrap",
+    "homepage": "https://github.com/lagdo/ui-builder-bootstrap3",
     "license": "MIT",
     "keywords": ["HTML", "UI Builder", "Bootstrap"],
     "support": {
-        "issues": "https://github.com/lagdo/ui-builder-bootstrap/issues",
-        "source": "https://github.com/lagdo/ui-builder-bootstrap"
+        "issues": "https://github.com/lagdo/ui-builder-bootstrap3/issues",
+        "source": "https://github.com/lagdo/ui-builder-bootstrap3"
     },
     "require": {
         "php": ">=8.0",
