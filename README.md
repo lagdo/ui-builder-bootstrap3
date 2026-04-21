@@ -1,5 +1,5 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/lagdo/ui-builder-bootstrap3/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/lagdo/ui-builder-bootstrap3/?branch=main)
-[![StyleCI](https://styleci.io/repos/449480114/shield?branch=main)](https://styleci.io/repos/449480114)
+[![StyleCI](https://styleci.io/repos/809165591/shield?branch=main)](https://styleci.io/repos/809165591)
 
 [![Latest Stable Version](https://poser.pugx.org/lagdo/ui-builder-bootstrap3/v/stable)](https://packagist.org/packages/lagdo/ui-builder-bootstrap3)
 [![Total Downloads](https://poser.pugx.org/lagdo/ui-builder-bootstrap3/downloads)](https://packagist.org/packages/lagdo/ui-builder-bootstrap3)
