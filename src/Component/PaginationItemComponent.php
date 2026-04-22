@@ -11,7 +11,7 @@ class PaginationItemComponent extends BaseComponent
      */
     protected function onCreate(): void
     {
-        $this->addWrapper('li');
+        $this->addWrapper($this->newElement('li'));
     }
 
     /**

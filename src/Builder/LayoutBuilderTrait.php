@@ -11,7 +11,7 @@ trait LayoutBuilderTrait
      */
     protected function _initLayoutBuilder(): void
     {
-        $this->rowComponentClass = Component\RowComponent::class;
-        $this->colComponentClass = Component\ColComponent::class;
+        $this->rowComponentClass = Component\GridRowComponent::class;
+        $this->colComponentClass = Component\GridColComponent::class;
     }
 }

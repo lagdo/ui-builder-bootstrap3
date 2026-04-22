@@ -5,6 +5,8 @@ namespace Lagdo\UiBuilder\Bootstrap3\Component;
 use Lagdo\UiBuilder\Component\Base\CheckboxComponent as BaseComponent;
 use Lagdo\UiBuilder\Component\Base\InputGroupComponent;
 use Lagdo\UiBuilder\Component\HtmlComponent;
+use Lagdo\UiBuilder\Component\HtmlElement;
+use Lagdo\UiBuilder\Component\Html\Text;
 
 class CheckboxComponent extends BaseComponent
 {
@@ -24,10 +26,22 @@ class CheckboxComponent extends BaseComponent
     protected function onBuild(HtmlComponent $parent): void
     {
         if (is_a($parent, InputGroupComponent::class)) {
-            $this->addWrapper('span', [
+            $this->addWrapper($this->newElement('span', [
                 'class' => 'input-group-addon',
                 'style' => 'background-color:white;padding:8px;',
-            ]);
+            ]));
         }
+    }
+
+    /**
+     * @param HtmlElement $label
+     * @param Text $text
+     *
+     * @return void
+     */
+    protected function setLabel(HtmlElement $label, Text $text): void
+    {
+        $label->addBaseClass('form-label')->addChild($text);
+        $this->addNextSibling($label);
     }
 }
