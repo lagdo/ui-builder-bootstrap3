@@ -3,7 +3,6 @@
 namespace Lagdo\UiBuilder\Bootstrap3\Component;
 
 use Lagdo\UiBuilder\Component\Base\ButtonComponent as BaseComponent;
-use Lagdo\UiBuilder\Component\HtmlComponent;
 
 use function is_a;
 
@@ -24,12 +23,11 @@ class ButtonComponent extends BaseComponent
     }
 
     /**
-     * @param HtmlComponent $parent
-     *
      * @return void
      */
-    protected function onBuild(HtmlComponent $parent): void
+    protected function onBuild(): void
     {
+        $parent = $this->parent();
         if ($this->fullWidth && !is_a($parent, ButtonGroupComponent::class)) {
             $this->element()->addClass('btn-block');
         }

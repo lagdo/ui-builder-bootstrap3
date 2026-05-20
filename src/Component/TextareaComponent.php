@@ -3,18 +3,15 @@
 namespace Lagdo\UiBuilder\Bootstrap3\Component;
 
 use Lagdo\UiBuilder\Component\Base\TextareaComponent as BaseComponent;
-use Lagdo\UiBuilder\Component\HtmlComponent;
 use Lagdo\UiBuilder\Component\HtmlElement;
 use Lagdo\UiBuilder\Component\Html\Text;
 
 class TextareaComponent extends BaseComponent
 {
     /**
-     * @param HtmlComponent $parent
-     *
      * @return void
      */
-    protected function onBuild(HtmlComponent $parent): void
+    protected function onBuild(): void
     {
         if ($this->inForm()) {
             $this->element()->addBaseClass('form-control');

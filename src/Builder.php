@@ -2,7 +2,7 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3;
 
-use Lagdo\UiBuilder\Builder as AbstractBuilder;
+use Lagdo\UiBuilder\AbstractBuilder;
 
 class Builder extends AbstractBuilder
 {
