@@ -11,6 +11,7 @@ trait TabBuilderTrait
      */
     protected function initTabBuilder(): void
     {
+        $this->tabsComponentClass = Component\TabsComponent::class;
         $this->tabNavComponentClass = Component\TabNavComponent::class;
         $this->tabNavItemComponentClass = Component\TabNavItemComponent::class;
         $this->tabContentComponentClass = Component\TabContentComponent::class;

@@ -45,7 +45,7 @@ class TabNavComponent extends BaseComponent
     /**
      * @return static
      */
-    public function fullWidth(): static
+    public function fill(): static
     {
         // Replace the second class.
         $this->element()->setBaseClass(2, 'nav-justified');
