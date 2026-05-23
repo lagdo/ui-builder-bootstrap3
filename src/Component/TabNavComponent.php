@@ -17,48 +17,33 @@ class TabNavComponent extends BaseComponent
     protected function onCreate(): void
     {
         $this->element()->addBaseClass('nav');
-        $this->element()->addBaseClass('nav-tabs');
     }
 
     /**
-     * @param string $style
+     * @return void
+     */
+    protected function onBuild(): void
+    {
+        $styleClass = match($this->prop('style', '')) {
+            'pills' => 'nav-pills',
+            // 'lines' => '', // Not implemented
+            default => 'nav-tabs',
+        };
+        $this->element()->addBaseClass($styleClass);
+
+        if ($this->parent()->prop('vertical', false)) {
+            $this->element()->addClass('nav-stacked');
+        }
+    }
+
+    /**
+     * @param bool $justified
      *
      * @return static
      */
-    public function look(string $style): static
+    public function fill(bool $justified = false): static
     {
-        // Replace the second class.
-        $this->element()->setBaseClass(1, 'nav-' . trim($style));
-        return $this;
-    }
-
-    /**
-     * @return static
-     */
-    public function vertical(): static
-    {
-        // Replace the second class.
-        $this->element()->setBaseClass(2, 'nav-pills nav-stacked');
-        return $this;
-    }
-
-    /**
-     * @return static
-     */
-    public function fill(): static
-    {
-        // Replace the second class.
-        $this->element()->setBaseClass(2, 'nav-justified');
-        return $this;
-    }
-
-    /**
-     * @param string $justify
-     *
-     * @return static
-     */
-    public function justify(string $justify): static
-    {
+        $this->element()->addClass('nav-justified');
         return $this;
     }
 }
