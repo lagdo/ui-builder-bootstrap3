@@ -9,7 +9,7 @@ class Builder extends AbstractBuilder
     use Builder\LayoutBuilderTrait;
     use Builder\ButtonBuilderTrait;
     use Builder\DropdownBuilderTrait;
-    use Builder\PanelBuilderTrait;
+    use Builder\CardBuilderTrait;
     use Builder\FormBuilderTrait;
     use Builder\MenuBuilderTrait;
     use Builder\TabBuilderTrait;
@@ -19,16 +19,16 @@ class Builder extends AbstractBuilder
     /**
      * @return void
      */
-    protected function _init(): void
+    protected function initBuilder(): void
     {
-        $this->_initLayoutBuilder();
-        $this->_initButtonBuilder();
-        $this->_initDropdownBuilder();
-        $this->_initPanelBuilder();
-        $this->_initFormBuilder();
-        $this->_initMenuBuilder();
-        $this->_initTabBuilder();
-        $this->_initPaginationBuilder();
-        $this->_initTableBuilder();
+        $this->initLayoutBuilder();
+        $this->initButtonBuilder();
+        $this->initDropdownBuilder();
+        $this->initCardBuilder();
+        $this->initFormBuilder();
+        $this->initMenuBuilder();
+        $this->initTabBuilder();
+        $this->initPaginationBuilder();
+        $this->initTableBuilder();
     }
 }

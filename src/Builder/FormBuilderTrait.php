@@ -9,7 +9,7 @@ trait FormBuilderTrait
     /**
      * @return void
      */
-    protected function _initFormBuilder(): void
+    protected function initFormBuilder(): void
     {
         $this->formComponentClass = Component\FormComponent::class;
         $this->labelComponentClass = Component\LabelComponent::class;

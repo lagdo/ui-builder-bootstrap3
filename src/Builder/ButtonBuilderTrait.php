@@ -9,7 +9,7 @@ trait ButtonBuilderTrait
     /**
      * @return void
      */
-    protected function _initButtonBuilder(): void
+    protected function initButtonBuilder(): void
     {
         $this->buttonComponentClass = Component\ButtonComponent::class;
         $this->buttonGroupComponentClass = Component\ButtonGroupComponent::class;

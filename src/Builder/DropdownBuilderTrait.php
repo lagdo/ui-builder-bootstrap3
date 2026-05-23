@@ -9,7 +9,7 @@ trait DropdownBuilderTrait
     /**
      * @return void
      */
-    protected function _initDropdownBuilder(): void
+    protected function initDropdownBuilder(): void
     {
         $this->dropdownComponentClass = Component\DropdownComponent::class;
         $this->dropdownItemComponentClass = Component\DropdownItemComponent::class;

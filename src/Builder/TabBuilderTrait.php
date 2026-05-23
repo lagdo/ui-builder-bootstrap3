@@ -9,7 +9,7 @@ trait TabBuilderTrait
     /**
      * @return void
      */
-    protected function _initTabBuilder(): void
+    protected function initTabBuilder(): void
     {
         $this->tabNavComponentClass = Component\TabNavComponent::class;
         $this->tabNavItemComponentClass = Component\TabNavItemComponent::class;

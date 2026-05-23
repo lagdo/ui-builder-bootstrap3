@@ -9,7 +9,7 @@ trait LayoutBuilderTrait
     /**
      * @return void
      */
-    protected function _initLayoutBuilder(): void
+    protected function initLayoutBuilder(): void
     {
         $this->rowComponentClass = Component\GridRowComponent::class;
         $this->colComponentClass = Component\GridColComponent::class;

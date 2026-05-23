@@ -9,7 +9,7 @@ trait MenuBuilderTrait
     /**
      * @return void
      */
-    protected function _initMenuBuilder(): void
+    protected function initMenuBuilder(): void
     {
         $this->menuComponentClass = Component\MenuComponent::class;
         $this->menuItemComponentClass = Component\MenuItemComponent::class;

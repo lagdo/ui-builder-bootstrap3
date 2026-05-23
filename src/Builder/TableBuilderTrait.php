@@ -9,7 +9,7 @@ trait TableBuilderTrait
     /**
      * @return void
      */
-    protected function _initTableBuilder(): void
+    protected function initTableBuilder(): void
     {
         $this->tableComponentClass = Component\TableComponent::class;
     }

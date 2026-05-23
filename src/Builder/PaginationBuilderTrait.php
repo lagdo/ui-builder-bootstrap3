@@ -9,7 +9,7 @@ trait PaginationBuilderTrait
     /**
      * @return void
      */
-    protected function _initPaginationBuilder(): void
+    protected function initPaginationBuilder(): void
     {
         $this->paginationComponentClass = Component\PaginationComponent::class;
         $this->paginationItemComponentClass = Component\PaginationItemComponent::class;

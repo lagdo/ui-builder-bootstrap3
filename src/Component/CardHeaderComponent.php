@@ -2,9 +2,9 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Component;
 
-use Lagdo\UiBuilder\Component\Base\PanelHeaderComponent as BaseComponent;
+use Lagdo\UiBuilder\Component\Base\CardHeaderComponent as BaseComponent;
 
-class PanelHeaderComponent extends BaseComponent
+class CardHeaderComponent extends BaseComponent
 {
     /**
      * @return void
