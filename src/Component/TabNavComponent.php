@@ -31,7 +31,7 @@ class TabNavComponent extends BaseComponent
         };
         $this->element()->addBaseClass($styleClass);
 
-        if ($this->parent()->prop('vertical', false)) {
+        if ($this->parentProp(1, 'vertical', false)) {
             $this->element()->addClass('nav-stacked');
         }
     }
