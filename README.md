@@ -14,36 +14,6 @@ This package extends the [HTML UI builder](https://github.com/lagdo/ui-builder) 
 
 See the [HTML UI builder](https://github.com/lagdo/ui-builder) documentation.
 
-Depending on the version of Bootstrap, a different class instance must provided where the `Lagdo\UiBuilder\BuilderInterface` is required.
-
-For example, let say this `View` class is used to create HTML code.
-```php
-use Lagdo\UiBuilder\BuilderInterface;
-
-class View
-{
-    /**
-     * @var BuilderInterface
-     */
-    protected $uiBuilder;
-
-    /**
-     * @param BuilderInterface
-     */
-    public function __construct(BuilderInterface $uiBuilder)
-    {
-        $this->uiBuilder = $uiBuilder;
-    }
-}
-```
-
-With the following example, the `View` class will generate HTML code for Bootstrap 3.
-```php
-use Lagdo\UiBuilder\Bootstrap3\Builder;
-
-$view = new View(new Builder());
-```
-
 ### Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
