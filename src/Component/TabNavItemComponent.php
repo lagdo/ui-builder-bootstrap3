@@ -39,21 +39,17 @@ class TabNavItemComponent extends BaseComponent
     public function active(bool $active = false): static
     {
         if ($active) {
-            $this->wrapper(0)?->setClass('active');
+            $this->wrapper(0)?->addClass('active');
         }
         return $this;
     }
 
     /**
-     * @param bool $enabled
-     *
      * @return static
      */
-    public function enabled(bool $enabled): static
+    public function disable(): static
     {
-        if (!$enabled) {
-            $this->wrapper(0)?->setClass('disabled');
-        }
+        $this->wrapper(0)?->addClass('disabled');
         return $this;
     }
 }
