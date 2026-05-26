@@ -15,15 +15,11 @@ class TableComponent extends BaseComponent
     }
 
     /**
-     * @param bool $responsive
-     *
      * @return static
      */
-    public function responsive(bool $responsive = true): static
+    public function responsive(): static
     {
-        if ($responsive) {
-            $this->addWrapper($this->newElement('div', ['class' => 'table-responsive']));
-        }
+        $this->addWrapper($this->newElement('div', ['class' => 'table-responsive']));
         return $this;
     }
 
