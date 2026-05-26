@@ -24,13 +24,29 @@ class TableComponent extends BaseComponent
     }
 
     /**
-     * @param string $style
-     *
      * @return static
      */
-    public function skin(string $style): static
+    public function stripe(): static
     {
-        $this->element()->addClass("table-$style");
+        $this->element()->addClass('table-striped');
+        return $this;
+    }
+
+    /**
+     * @return static
+     */
+    public function border(): static
+    {
+        $this->element()->addClass('table-bordered');
+        return $this;
+    }
+
+    /**
+     * @return static
+     */
+    public function hover(): static
+    {
+        $this->element()->addClass('table-hover');
         return $this;
     }
 }
