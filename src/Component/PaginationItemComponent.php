@@ -15,36 +15,17 @@ class PaginationItemComponent extends BaseComponent
     }
 
     /**
-     * @param bool $active
-     *
-     * @return static
+     * @return void
      */
-    public function active(bool $active): static
+    protected function onBuild(): void
     {
-        if ($active) {
+        if ($this->prop('active', false)) {
             $this->wrapper(0)->setClass('active');
         }
-        return $this;
-    }
-
-    /**
-     * @param bool $enabled
-     *
-     * @return static
-     */
-    public function enabled(bool $enabled): static
-    {
-        $wrapper = $this->wrapper(0);
-        if (!$enabled) {
-            $this->element()->setTag('span'); // A different tag name.
-            $wrapper->setClass('disabled');
-            return $this;
+        if (!$this->prop('enabled', true)) {
+            $this->element()->addClass('disabled')
+                ->setTag('span'); // A different tag name.
         }
-
-        if ($wrapper->hasClass('disabled')) {
-            $wrapper->removeClass('disabled');
-        }
-        return $this;
     }
 
     /**

@@ -12,7 +12,7 @@ trait DropdownBuilderTrait
     protected function initDropdownBuilder(): void
     {
         $this->dropdownComponentClass = Component\DropdownComponent::class;
-        $this->dropdownItemComponentClass = Component\DropdownItemComponent::class;
+        $this->dropdownButtonComponentClass = Component\DropdownButtonComponent::class;
         $this->dropdownMenuComponentClass = Component\DropdownMenuComponent::class;
         $this->dropdownMenuItemComponentClass = Component\DropdownMenuItemComponent::class;
     }
