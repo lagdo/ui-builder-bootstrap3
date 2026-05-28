@@ -24,11 +24,11 @@ class ButtonComponent extends BaseComponent
      */
     protected function onBuild(): void
     {
-        $type = $this->prop('alert') ?? $this->prop('visual', null);
-        if ($type === null || $type === VisualEnum::SECONDARY) {
-            $type = VisualEnum::DEFAULT;
+        $visual = $this->prop('visual', null);
+        if ($visual === null || $visual === VisualEnum::SECONDARY) {
+            $visual = VisualEnum::DEFAULT;
         }
-        $this->element()->addBaseClass("btn-{$type->value}");
+        $this->element()->addBaseClass("btn-{$visual->value}");
 
         switch($this->prop('size', null)) {
         case SizeEnum::LARGE:
