@@ -16,6 +16,7 @@ trait TableBuilderTrait
         $this->tableBodyComponentClass = Component\TableBodyComponent::class;
         $this->tableFootComponentClass = Component\TableFootComponent::class;
         $this->tableRowComponentClass = Component\TableRowComponent::class;
-        $this->tableDataComponentClass = Component\TableDataComponent::class;
+        $this->tableHeadCellComponentClass = Component\TableHeadCellComponent::class;
+        $this->tableDataCellComponentClass = Component\TableDataCellComponent::class;
     }
 }
