@@ -13,6 +13,5 @@ trait ButtonBuilderTrait
     {
         $this->buttonComponentClass = Component\ButtonComponent::class;
         $this->buttonGroupComponentClass = Component\ButtonGroupComponent::class;
-        $this->badgeComponentClass = Component\BadgeComponent::class;
     }
 }
