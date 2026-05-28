@@ -7,12 +7,9 @@ use Lagdo\UiBuilder\Component\Base\AlertComponent as BaseComponent;
 class AlertComponent extends BaseComponent
 {
     /**
-     * @return string
+     * @var string
      */
-    protected function tagName(): string
-    {
-        return 'p';
-    }
+    protected string $tagName = 'p';
 
     /**
      * @inheritDoc

@@ -7,12 +7,9 @@ use Lagdo\UiBuilder\Component\Base\DropdownMenuItemComponent as BaseComponent;
 class DropdownMenuItemComponent extends BaseComponent
 {
     /**
-     * @return string
+     * @var string
      */
-    protected function tagName(): string
-    {
-        return 'a';
-    }
+    protected string $tagName = 'a';
 
     /**
      * @return void

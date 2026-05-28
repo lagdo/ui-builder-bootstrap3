@@ -7,12 +7,9 @@ use Lagdo\UiBuilder\Component\Base\TabNavComponent as BaseComponent;
 class TabNavComponent extends BaseComponent
 {
     /**
-     * @return string
+     * @var string
      */
-    protected function tagName(): string
-    {
-        return 'ul';
-    }
+    protected string $tagName = 'ul';
 
     /**
      * @return void
