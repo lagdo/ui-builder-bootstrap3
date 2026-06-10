@@ -2,7 +2,7 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Component;
 
-use Lagdo\UiBuilder\Component\Base\GridColComponent as BaseComponent;
+use Lagdo\UiBuilder\Component\GridColComponent as BaseComponent;
 
 class GridColComponent extends BaseComponent
 {

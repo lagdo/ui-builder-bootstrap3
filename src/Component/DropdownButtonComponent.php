@@ -4,7 +4,7 @@ namespace Lagdo\UiBuilder\Bootstrap3\Component;
 
 use Lagdo\UiBuilder\Component\Attr\VisualEnum;
 use Lagdo\UiBuilder\Component\Attr\SizeEnum;
-use Lagdo\UiBuilder\Component\Base\DropdownButtonComponent as BaseComponent;
+use Lagdo\UiBuilder\Component\DropdownButtonComponent as BaseComponent;
 
 class DropdownButtonComponent extends BaseComponent
 {

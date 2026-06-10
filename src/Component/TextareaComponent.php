@@ -2,9 +2,9 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Component;
 
-use Lagdo\UiBuilder\Component\Base\TextareaComponent as BaseComponent;
-use Lagdo\UiBuilder\Component\HtmlElement;
-use Lagdo\UiBuilder\Component\Html\Text;
+use Lagdo\UiBuilder\Component\TextareaComponent as BaseComponent;
+use Lagdo\UiBuilder\Html\HtmlElement;
+use Lagdo\UiBuilder\Html\Element\Text;
 
 class TextareaComponent extends BaseComponent
 {
@@ -19,10 +19,7 @@ class TextareaComponent extends BaseComponent
     }
 
     /**
-     * @param HtmlElement $label
-     * @param Text $text
-     *
-     * @return void
+     * @inheritDoc
      */
     protected function setLabel(HtmlElement $label, Text $text): void
     {

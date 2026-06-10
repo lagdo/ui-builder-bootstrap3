@@ -2,9 +2,9 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Component;
 
-use Lagdo\UiBuilder\Component\Base\InputComponent as BaseComponent;
-use Lagdo\UiBuilder\Component\HtmlElement;
-use Lagdo\UiBuilder\Component\Html\Text;
+use Lagdo\UiBuilder\Component\InputComponent as BaseComponent;
+use Lagdo\UiBuilder\Html\HtmlElement;
+use Lagdo\UiBuilder\Html\Element\Text;
 
 class InputComponent extends BaseComponent
 {
@@ -19,10 +19,7 @@ class InputComponent extends BaseComponent
     }
 
     /**
-     * @param HtmlElement $label
-     * @param Text $text
-     *
-     * @return void
+     * @inheritDoc
      */
     protected function setLabel(HtmlElement $label, Text $text): void
     {

@@ -2,7 +2,7 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Component;
 
-use Lagdo\UiBuilder\Component\Base\AlertComponent as BaseComponent;
+use Lagdo\UiBuilder\Component\AlertComponent as BaseComponent;
 
 class AlertComponent extends BaseComponent
 {

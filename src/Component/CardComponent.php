@@ -2,7 +2,7 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Component;
 
-use Lagdo\UiBuilder\Component\Base\CardComponent as BaseComponent;
+use Lagdo\UiBuilder\Component\CardComponent as BaseComponent;
 
 class CardComponent extends BaseComponent
 {

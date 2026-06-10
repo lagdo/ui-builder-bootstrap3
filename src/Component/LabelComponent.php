@@ -2,8 +2,8 @@
 
 namespace Lagdo\UiBuilder\Bootstrap3\Component;
 
-use Lagdo\UiBuilder\Component\Base\InputGroupComponent;
-use Lagdo\UiBuilder\Component\Base\LabelComponent as BaseComponent;
+use Lagdo\UiBuilder\Component\InputGroupComponent;
+use Lagdo\UiBuilder\Component\LabelComponent as BaseComponent;
 
 use function is_a;
 
