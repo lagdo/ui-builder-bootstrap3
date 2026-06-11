@@ -11,7 +11,7 @@ class TabContentItemComponent extends BaseComponent
      */
     protected function onCreate(): void
     {
-        $this->element()->addBaseClass('tab-pane fade');
+        $this->addBaseClass('tab-pane fade');
     }
 
     /**
@@ -20,7 +20,7 @@ class TabContentItemComponent extends BaseComponent
     protected function onBuild(): void
     {
         if ($this->prop('active', false)) {
-            $this->element()->addBaseClass('in active');
+            $this->addBaseClass('in active');
         }
     }
 }

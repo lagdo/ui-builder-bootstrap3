@@ -11,6 +11,6 @@ class CardComponent extends BaseComponent
      */
     protected function onCreate(): void
     {
-        $this->element()->addBaseClass('panel');
+        $this->addBaseClass('panel');
     }
 }

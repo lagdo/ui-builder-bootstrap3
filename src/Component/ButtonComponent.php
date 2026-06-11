@@ -15,7 +15,7 @@ class ButtonComponent extends BaseComponent
      */
     protected function onCreate(): void
     {
-        $this->element()->addBaseClass('btn');
+        $this->addBaseClass('btn');
         $this->element()->setAttribute('type', 'button');
     }
 
@@ -28,7 +28,7 @@ class ButtonComponent extends BaseComponent
         if ($visual === null || $visual === VisualEnum::SECONDARY) {
             $visual = VisualEnum::DEFAULT;
         }
-        $this->element()->addBaseClass("btn-{$visual->value}");
+        $this->addBaseClass("btn-{$visual->value}");
 
         switch($this->prop('size', null)) {
         case SizeEnum::LARGE:

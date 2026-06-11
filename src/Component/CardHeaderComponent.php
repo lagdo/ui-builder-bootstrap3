@@ -11,6 +11,6 @@ class CardHeaderComponent extends BaseComponent
      */
     protected function onCreate(): void
     {
-        $this->element()->addBaseClass('panel-heading');
+        $this->addBaseClass('panel-heading');
     }
 }

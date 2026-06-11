@@ -11,6 +11,6 @@ class PaginationComponent extends BaseComponent
      */
     protected function onCreate(): void
     {
-        $this->element()->addBaseClass('pagination');
+        $this->addBaseClass('pagination');
     }
 }

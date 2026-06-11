@@ -26,7 +26,7 @@ class DropdownButtonComponent extends BaseComponent
         if ($visual === null || $visual === VisualEnum::SECONDARY) {
             $visual = VisualEnum::DEFAULT;
         }
-        $this->element()->addBaseClass("btn-{$visual->value}");
+        $this->addBaseClass("btn-{$visual->value}");
 
         switch($this->prop('size', null)) {
         case SizeEnum::LARGE:

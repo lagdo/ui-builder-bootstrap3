@@ -11,7 +11,7 @@ class TableComponent extends BaseComponent
      */
     protected function onCreate(): void
     {
-        $this->element()->addBaseClass('table');
+        $this->addBaseClass('table');
     }
 
     /**

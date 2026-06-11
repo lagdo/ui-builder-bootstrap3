@@ -15,7 +15,7 @@ class LabelComponent extends BaseComponent
     protected function onBuild(): void
     {
         if ($this->inForm()) {
-            $this->element()->addBaseClass('control-label');
+            $this->addBaseClass('control-label');
         }
 
         // A label in an input group must be wrapped into a span with class "input-group-addon".

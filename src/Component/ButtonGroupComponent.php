@@ -11,7 +11,7 @@ class ButtonGroupComponent extends BaseComponent
      */
     protected function onCreate(): void
     {
-        $this->element()->addBaseClass('btn-group');
+        $this->addBaseClass('btn-group');
         $this->element()->setAttribute('role', 'group');
     }
 

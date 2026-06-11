@@ -11,7 +11,7 @@ class GridRowComponent extends BaseComponent
      */
     protected function onCreate(): void
     {
-        $this->element()->addBaseClass('row');
+        $this->addBaseClass('row');
     }
 
     /**
@@ -20,7 +20,7 @@ class GridRowComponent extends BaseComponent
     protected function onBuild(): void
     {
         if ($this->inForm()) {
-            $this->element()->addBaseClass('form-group');
+            $this->addBaseClass('form-group');
         }
     }
 }

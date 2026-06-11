@@ -16,7 +16,7 @@ class TabNavComponent extends BaseComponent
      */
     protected function onCreate(): void
     {
-        $this->element()->addBaseClass('nav');
+        $this->addBaseClass('nav');
     }
 
     /**
@@ -29,7 +29,7 @@ class TabNavComponent extends BaseComponent
             // 'lines' => '', // Not implemented
             default => 'nav-tabs',
         };
-        $this->element()->addBaseClass($styleClass);
+        $this->addBaseClass($styleClass);
 
         if ($this->parentProp(1, 'vertical', false)) {
             $this->element()->addClass('nav-stacked');
