@@ -17,7 +17,7 @@
     },
     "require": {
         "php": ">=8.0",
-        "lagdo/ui-builder": "0.9.*"
+        "lagdo/ui-builder": "0.10.*"
     },
     "autoload": {
         "psr-4": {
