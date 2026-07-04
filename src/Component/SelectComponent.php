@@ -23,7 +23,7 @@ class SelectComponent extends BaseComponent
      */
     protected function setLabel(HtmlElement $label, Text $text): void
     {
-        $label->addBaseClass('form-label')->addChild($text);
+        $label->addClass('form-label')->addChild($text);
         $this->prependSibling($label);
     }
 }
