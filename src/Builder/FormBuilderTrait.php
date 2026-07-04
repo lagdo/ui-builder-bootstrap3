@@ -16,6 +16,7 @@ trait FormBuilderTrait
         $this->inputComponentClass = Component\InputComponent::class;
         $this->textareaComponentClass = Component\TextareaComponent::class;
         $this->checkboxComponentClass = Component\CheckboxComponent::class;
+        $this->switchComponentClass = Component\SwitchComponent::class;
         $this->radioComponentClass = Component\RadioComponent::class;
         $this->selectComponentClass = Component\SelectComponent::class;
         $this->selectOptionComponentClass = Component\SelectOptionComponent::class;
